@@ -14425,7 +14425,36 @@
           "exec_type",
           "system_file_type"
         ],
-        "zygote_userfaultfd": []
+        "zygote_userfaultfd": [],
+        "and,appdomain,not,isolated_app_all": [
+          "hal_allocator_client",
+          "hal_configstore_client",
+          "hal_cas_client"
+        ],
+        "hal_allocator_client": [
+          "halclientdomain"
+        ],
+        "and,appdomain,not,isolated_app": [
+          "hal_omx_client",
+          "hal_codec2_client",
+          "hal_graphics_allocator_client",
+          "hal_neuralnetworks_client"
+        ],
+        "and,appdomain,not,or,isolated_app_all,sdk_sandbox_all": [
+          "hal_drm_client"
+        ],
+        "hal_camera": [
+          "hal_allocator_client"
+        ],
+        "untrusted_app_visible_hwservice": [
+          "untrusted_app_visible_hwservice_violators"
+        ],
+        "untrusted_app_visible_halserver": [
+          "untrusted_app_visible_halserver_violators"
+        ],
+        "and,system_property_type,vendor_property_type": [
+          "system_and_vendor_property_type"
+        ]
       },
       "typeAttrNames": [
         "cil_gen_require",
@@ -44339,6 +44368,666 @@
       "types": {
         "google_camera_app": [
           "domain"
+        ],
+        "adbd": [
+          "domain"
+        ],
+        "aidl_lazy_test_server": [
+          "domain"
+        ],
+        "apexd": [
+          "domain"
+        ],
+        "app_zygote": [
+          "domain"
+        ],
+        "artd": [
+          "domain"
+        ],
+        "atrace": [
+          "domain"
+        ],
+        "audioserver": [
+          "domain"
+        ],
+        "blkid": [
+          "domain"
+        ],
+        "blkid_untrusted": [
+          "domain"
+        ],
+        "bluetooth": [
+          "domain"
+        ],
+        "bootanim": [
+          "domain"
+        ],
+        "bootstat": [
+          "domain"
+        ],
+        "bpfloader": [
+          "domain"
+        ],
+        "bufferhubd": [
+          "domain"
+        ],
+        "cameraserver": [
+          "domain"
+        ],
+        "charger": [
+          "domain"
+        ],
+        "charger_vendor": [
+          "domain"
+        ],
+        "crash_dump": [
+          "domain"
+        ],
+        "credstore": [
+          "domain"
+        ],
+        "crosvm": [
+          "domain"
+        ],
+        "dhcp": [
+          "domain"
+        ],
+        "dnsmasq": [
+          "domain"
+        ],
+        "drmserver": [
+          "domain"
+        ],
+        "dumpstate": [
+          "domain"
+        ],
+        "e2fs": [
+          "domain"
+        ],
+        "early_virtmgr": [
+          "domain"
+        ],
+        "ephemeral_app": [
+          "domain"
+        ],
+        "evsmanagerd": [
+          "domain"
+        ],
+        "extra_free_kbytes": [
+          "domain"
+        ],
+        "fastbootd": [
+          "domain"
+        ],
+        "fingerprintd": [
+          "domain"
+        ],
+        "flags_health_check": [
+          "domain"
+        ],
+        "fsck": [
+          "domain"
+        ],
+        "fsck_untrusted": [
+          "domain"
+        ],
+        "gatekeeperd": [
+          "domain"
+        ],
+        "gmscore_app": [
+          "domain"
+        ],
+        "gpuservice": [
+          "domain"
+        ],
+        "healthd": [
+          "domain"
+        ],
+        "heapprofd": [
+          "domain"
+        ],
+        "hwservicemanager": [
+          "domain"
+        ],
+        "idmap": [
+          "domain"
+        ],
+        "incident": [
+          "domain"
+        ],
+        "incident_helper": [
+          "domain"
+        ],
+        "incidentd": [
+          "domain"
+        ],
+        "init": [
+          "domain"
+        ],
+        "inputflinger": [
+          "domain"
+        ],
+        "installd": [
+          "domain"
+        ],
+        "isolated_app": [
+          "domain"
+        ],
+        "isolated_compute_app": [
+          "domain"
+        ],
+        "kernel": [
+          "domain"
+        ],
+        "keystore": [
+          "domain"
+        ],
+        "llkd": [
+          "domain"
+        ],
+        "lmkd": [
+          "domain"
+        ],
+        "logd": [
+          "domain"
+        ],
+        "logpersist": [
+          "domain"
+        ],
+        "mdnsd": [
+          "domain"
+        ],
+        "mediadrmserver": [
+          "domain"
+        ],
+        "mediaextractor": [
+          "domain"
+        ],
+        "mediametrics": [
+          "domain"
+        ],
+        "mediaprovider": [
+          "domain"
+        ],
+        "mediaserver": [
+          "domain"
+        ],
+        "mediaswcodec": [
+          "domain"
+        ],
+        "mediatranscoding": [
+          "domain"
+        ],
+        "modprobe": [
+          "domain"
+        ],
+        "mtp": [
+          "domain"
+        ],
+        "netd": [
+          "domain"
+        ],
+        "netutils_wrapper": [
+          "domain"
+        ],
+        "network_stack": [
+          "domain"
+        ],
+        "nfc": [
+          "domain"
+        ],
+        "perfetto": [
+          "domain"
+        ],
+        "performanced": [
+          "domain"
+        ],
+        "platform_app": [
+          "domain"
+        ],
+        "postinstall": [
+          "domain"
+        ],
+        "ppp": [
+          "domain"
+        ],
+        "priv_app": [
+          "domain"
+        ],
+        "prng_seeder": [
+          "domain"
+        ],
+        "profman": [
+          "domain"
+        ],
+        "radio": [
+          "domain"
+        ],
+        "recovery": [
+          "domain"
+        ],
+        "recovery_persist": [
+          "domain"
+        ],
+        "recovery_refresh": [
+          "domain"
+        ],
+        "rkpdapp": [
+          "domain"
+        ],
+        "rs": [
+          "domain"
+        ],
+        "rss_hwm_reset": [
+          "domain"
+        ],
+        "runas": [
+          "domain"
+        ],
+        "runas_app": [
+          "domain"
+        ],
+        "sdcardd": [
+          "domain"
+        ],
+        "secure_element": [
+          "domain"
+        ],
+        "servicemanager": [
+          "domain"
+        ],
+        "sgdisk": [
+          "domain"
+        ],
+        "shared_relro": [
+          "domain"
+        ],
+        "shell": [
+          "domain"
+        ],
+        "simpleperf": [
+          "domain"
+        ],
+        "simpleperf_app_runner": [
+          "domain"
+        ],
+        "slideshow": [
+          "domain"
+        ],
+        "statsd": [
+          "domain"
+        ],
+        "su": [
+          "domain"
+        ],
+        "surfaceflinger": [
+          "domain"
+        ],
+        "system_app": [
+          "domain"
+        ],
+        "system_server": [
+          "domain"
+        ],
+        "tee": [
+          "domain"
+        ],
+        "tombstoned": [
+          "domain"
+        ],
+        "toolbox": [
+          "domain"
+        ],
+        "traced": [
+          "domain"
+        ],
+        "traced_perf": [
+          "domain"
+        ],
+        "traced_probes": [
+          "domain"
+        ],
+        "traceur_app": [
+          "domain"
+        ],
+        "ueventd": [
+          "domain"
+        ],
+        "uncrypt": [
+          "domain"
+        ],
+        "untrusted_app": [
+          "domain"
+        ],
+        "untrusted_app_32": [
+          "domain"
+        ],
+        "untrusted_app_30": [
+          "domain"
+        ],
+        "untrusted_app_29": [
+          "domain"
+        ],
+        "untrusted_app_27": [
+          "domain"
+        ],
+        "untrusted_app_25": [
+          "domain"
+        ],
+        "update_engine": [
+          "domain"
+        ],
+        "update_verifier": [
+          "domain"
+        ],
+        "usbd": [
+          "domain"
+        ],
+        "vdc": [
+          "domain"
+        ],
+        "vendor_init": [
+          "domain"
+        ],
+        "vendor_misc_writer": [
+          "domain"
+        ],
+        "vendor_modprobe": [
+          "domain"
+        ],
+        "vendor_shell": [
+          "domain"
+        ],
+        "virtual_camera": [
+          "domain"
+        ],
+        "virtual_touchpad": [
+          "domain"
+        ],
+        "virtualizationmanager": [
+          "domain"
+        ],
+        "vndservicemanager": [
+          "domain"
+        ],
+        "vold": [
+          "domain"
+        ],
+        "vold_prepare_subdirs": [
+          "domain"
+        ],
+        "watchdogd": [
+          "domain"
+        ],
+        "webview_zygote": [
+          "domain"
+        ],
+        "wificond": [
+          "domain"
+        ],
+        "zygote": [
+          "domain"
+        ],
+        "aconfigd": [
+          "domain"
+        ],
+        "aconfigd_mainline": [
+          "domain"
+        ],
+        "adbd_tradeinmode": [
+          "domain"
+        ],
+        "apex_test_prepostinstall": [
+          "domain"
+        ],
+        "apexd_derive_classpath": [
+          "domain"
+        ],
+        "art_boot": [
+          "domain"
+        ],
+        "art_exec": [
+          "domain"
+        ],
+        "auditctl": [
+          "domain"
+        ],
+        "automotive_display_service": [
+          "domain"
+        ],
+        "bert_collector": [
+          "domain"
+        ],
+        "blank_screen": [
+          "domain"
+        ],
+        "boringssl_self_test": [
+          "domain"
+        ],
+        "vendor_boringssl_self_test": [
+          "domain"
+        ],
+        "canhalconfigurator": [
+          "domain"
+        ],
+        "clatd": [
+          "domain"
+        ],
+        "compos_fd_server": [
+          "domain"
+        ],
+        "compos_verify": [
+          "domain"
+        ],
+        "composd": [
+          "domain"
+        ],
+        "cppreopts": [
+          "domain"
+        ],
+        "derive_classpath": [
+          "domain"
+        ],
+        "derive_sdk": [
+          "domain"
+        ],
+        "device_as_webcam": [
+          "domain"
+        ],
+        "dex2oat": [
+          "domain"
+        ],
+        "dexopt_chroot_setup": [
+          "domain"
+        ],
+        "dmesgd": [
+          "domain"
+        ],
+        "fuseblkd": [
+          "domain"
+        ],
+        "fuseblkd_untrusted": [
+          "domain"
+        ],
+        "fwk_bufferhub": [
+          "domain"
+        ],
+        "gki_apex_prepostinstall": [
+          "domain"
+        ],
+        "gsid": [
+          "domain"
+        ],
+        "hal_allocator_default": [
+          "domain"
+        ],
+        "hal_keymint_system": [
+          "domain"
+        ],
+        "hal_widevine_system": [
+          "domain"
+        ],
+        "hidl_lazy_test_server": [
+          "domain"
+        ],
+        "iw": [
+          "domain"
+        ],
+        "kcmdlinectrl": [
+          "domain"
+        ],
+        "linkerconfig": [
+          "domain"
+        ],
+        "linux_vm_setup": [
+          "domain"
+        ],
+        "logviewer_app": [
+          "domain"
+        ],
+        "lpdumpd": [
+          "domain"
+        ],
+        "mediaprovider_app": [
+          "domain"
+        ],
+        "mediatuner": [
+          "domain"
+        ],
+        "memcgv2_activation_depth": [
+          "domain"
+        ],
+        "migrate_legacy_obb_data": [
+          "domain"
+        ],
+        "misctrl": [
+          "domain"
+        ],
+        "mm_events": [
+          "domain"
+        ],
+        "mmd": [
+          "domain"
+        ],
+        "mtectrl": [
+          "domain"
+        ],
+        "odrefresh": [
+          "domain"
+        ],
+        "odsign": [
+          "domain"
+        ],
+        "ot_ctl": [
+          "domain"
+        ],
+        "ot_daemon": [
+          "domain"
+        ],
+        "otapreopt_chroot": [
+          "domain"
+        ],
+        "otapreopt_slot": [
+          "domain"
+        ],
+        "overlay_remounter": [
+          "domain"
+        ],
+        "permissioncontroller_app": [
+          "domain"
+        ],
+        "postinstall_dexopt": [
+          "domain"
+        ],
+        "prefetch": [
+          "domain"
+        ],
+        "preopt2cachename": [
+          "domain"
+        ],
+        "profcollectd": [
+          "domain"
+        ],
+        "remount": [
+          "domain"
+        ],
+        "rkp_cert_processor": [
+          "domain"
+        ],
+        "rkpd": [
+          "domain"
+        ],
+        "sdk_sandbox_34": [
+          "domain"
+        ],
+        "sdk_sandbox_audit": [
+          "domain"
+        ],
+        "sdk_sandbox_next": [
+          "domain"
+        ],
+        "simpleperf_boot": [
+          "domain"
+        ],
+        "snapshotctl": [
+          "domain"
+        ],
+        "snapuserd": [
+          "domain"
+        ],
+        "stats": [
+          "domain"
+        ],
+        "storaged": [
+          "domain"
+        ],
+        "system_suspend": [
+          "domain"
+        ],
+        "trace_redactor": [
+          "domain"
+        ],
+        "tradeinmode": [
+          "domain"
+        ],
+        "updater_app": [
+          "domain"
+        ],
+        "uprobestats": [
+          "domain"
+        ],
+        "userdata_alias_remove": [
+          "domain"
+        ],
+        "vehicle_binding_util": [
+          "domain"
+        ],
+        "vfio_handler": [
+          "domain"
+        ],
+        "virtual_face": [
+          "domain"
+        ],
+        "virtual_fingerprint": [
+          "domain"
+        ],
+        "virtualizationservice": [
+          "domain"
+        ],
+        "vmlauncher_app": [
+          "domain"
+        ],
+        "vmnic": [
+          "domain"
+        ],
+        "vzwomatrigger_app": [
+          "domain"
+        ],
+        "wait_for_keymaster": [
+          "domain"
+        ],
+        "wifi_mainline_supplicant": [
+          "domain"
         ]
       },
       "typeAttrNames": [],
@@ -45265,6 +45954,1887 @@
         ],
         "dump_gsc": [
           "domain"
+        ],
+        "device_202504": [
+          "dev_type"
+        ],
+        "ashmem_device_202504": [
+          "dev_type"
+        ],
+        "ashmem_libcutils_device_202504": [
+          "dev_type"
+        ],
+        "audio_device_202504": [
+          "dev_type"
+        ],
+        "binder_device_202504": [
+          "dev_type"
+        ],
+        "hwbinder_device_202504": [
+          "dev_type"
+        ],
+        "vndbinder_device_202504": [
+          "dev_type"
+        ],
+        "block_device_202504": [
+          "dev_type"
+        ],
+        "bt_device_202504": [
+          "dev_type"
+        ],
+        "camera_device_202504": [
+          "dev_type"
+        ],
+        "dm_device_202504": [
+          "dev_type"
+        ],
+        "ublk_block_device_202504": [
+          "dev_type"
+        ],
+        "dm_user_device_202504": [
+          "dev_type"
+        ],
+        "ublk_control_device_202504": [
+          "dev_type"
+        ],
+        "keychord_device_202504": [
+          "dev_type"
+        ],
+        "loop_control_device_202504": [
+          "dev_type"
+        ],
+        "loop_device_202504": [
+          "dev_type"
+        ],
+        "pmsg_device_202504": [
+          "dev_type"
+        ],
+        "radio_device_202504": [
+          "dev_type"
+        ],
+        "ram_device_202504": [
+          "dev_type"
+        ],
+        "rtc_device_202504": [
+          "dev_type"
+        ],
+        "vd_device_202504": [
+          "dev_type"
+        ],
+        "vold_device_202504": [
+          "dev_type"
+        ],
+        "console_device_202504": [
+          "dev_type"
+        ],
+        "fscklogs_202504": [
+          "dev_type"
+        ],
+        "gpu_device_202504": [
+          "dev_type"
+        ],
+        "graphics_device_202504": [
+          "dev_type"
+        ],
+        "hw_random_device_202504": [
+          "dev_type"
+        ],
+        "input_device_202504": [
+          "dev_type"
+        ],
+        "port_device_202504": [
+          "dev_type"
+        ],
+        "lowpan_device_202504": [
+          "dev_type"
+        ],
+        "mtp_device_202504": [
+          "dev_type"
+        ],
+        "nfc_device_202504": [
+          "dev_type"
+        ],
+        "ptmx_device_202504": [
+          "dev_type"
+        ],
+        "kmsg_device_202504": [
+          "dev_type"
+        ],
+        "kmsg_debug_device_202504": [
+          "dev_type"
+        ],
+        "null_device_202504": [
+          "dev_type"
+        ],
+        "random_device_202504": [
+          "dev_type"
+        ],
+        "secure_element_device_202504": [
+          "dev_type"
+        ],
+        "sensors_device_202504": [
+          "dev_type"
+        ],
+        "serial_device_202504": [
+          "dev_type"
+        ],
+        "socket_device_202504": [
+          "dev_type"
+        ],
+        "owntty_device_202504": [
+          "dev_type"
+        ],
+        "tty_device_202504": [
+          "dev_type"
+        ],
+        "video_device_202504": [
+          "dev_type"
+        ],
+        "zero_device_202504": [
+          "dev_type"
+        ],
+        "fuse_device_202504": [
+          "dev_type"
+        ],
+        "iio_device_202504": [
+          "dev_type"
+        ],
+        "ion_device_202504": [
+          "dev_type"
+        ],
+        "dmabuf_heap_device_202504": [
+          "dev_type"
+        ],
+        "dmabuf_system_heap_device_202504": [
+          "dev_type"
+        ],
+        "dmabuf_system_secure_heap_device_202504": [
+          "dev_type"
+        ],
+        "qtaguid_device_202504": [
+          "dev_type"
+        ],
+        "watchdog_device_202504": [
+          "dev_type"
+        ],
+        "uhid_device_202504": [
+          "dev_type"
+        ],
+        "uio_device_202504": [
+          "dev_type"
+        ],
+        "tun_device_202504": [
+          "dev_type"
+        ],
+        "usbaccessory_device_202504": [
+          "dev_type"
+        ],
+        "usb_device_202504": [
+          "dev_type"
+        ],
+        "usb_serial_device_202504": [
+          "dev_type"
+        ],
+        "gnss_device_202504": [
+          "dev_type"
+        ],
+        "properties_device_202504": [
+          "dev_type"
+        ],
+        "properties_serial_202504": [
+          "dev_type"
+        ],
+        "property_info_202504": [
+          "dev_type"
+        ],
+        "hidraw_device_202504": [
+          "dev_type"
+        ],
+        "hci_attach_dev_202504": [
+          "dev_type"
+        ],
+        "rpmsg_device_202504": [
+          "dev_type"
+        ],
+        "root_block_device_202504": [
+          "dev_type"
+        ],
+        "frp_block_device_202504": [
+          "dev_type"
+        ],
+        "system_block_device_202504": [
+          "dev_type"
+        ],
+        "recovery_block_device_202504": [
+          "dev_type"
+        ],
+        "boot_block_device_202504": [
+          "dev_type"
+        ],
+        "dtbo_block_device_202504": [
+          "dev_type"
+        ],
+        "userdata_block_device_202504": [
+          "dev_type"
+        ],
+        "zoned_block_device_202504": [
+          "dev_type"
+        ],
+        "cache_block_device_202504": [
+          "dev_type"
+        ],
+        "swap_block_device_202504": [
+          "dev_type"
+        ],
+        "metadata_block_device_202504": [
+          "dev_type"
+        ],
+        "misc_block_device_202504": [
+          "dev_type"
+        ],
+        "super_block_device_202504": [
+          "dev_type"
+        ],
+        "sdcard_block_device_202504": [
+          "dev_type"
+        ],
+        "userdata_sysdev_202504": [
+          "dev_type"
+        ],
+        "rootdisk_sysdev_202504": [
+          "dev_type"
+        ],
+        "vfio_device_202504": [
+          "dev_type"
+        ],
+        "tee_device_202504": [
+          "dev_type"
+        ],
+        "adbd_202504": [
+          "domain"
+        ],
+        "aidl_lazy_test_server_202504": [
+          "domain"
+        ],
+        "apexd_202504": [
+          "domain"
+        ],
+        "app_zygote_202504": [
+          "domain"
+        ],
+        "artd_202504": [
+          "domain"
+        ],
+        "atrace_202504": [
+          "domain"
+        ],
+        "audioserver_202504": [
+          "domain"
+        ],
+        "blkid_202504": [
+          "domain"
+        ],
+        "blkid_untrusted_202504": [
+          "domain"
+        ],
+        "bluetooth_202504": [
+          "domain"
+        ],
+        "bootanim_202504": [
+          "domain"
+        ],
+        "bootstat_202504": [
+          "domain"
+        ],
+        "bpfloader_202504": [
+          "domain"
+        ],
+        "bufferhubd_202504": [
+          "domain",
+          "mlstrustedsubject"
+        ],
+        "cameraserver_202504": [
+          "domain"
+        ],
+        "charger_202504": [
+          "domain"
+        ],
+        "charger_vendor_202504": [
+          "domain"
+        ],
+        "crash_dump_202504": [
+          "domain"
+        ],
+        "credstore_202504": [
+          "domain"
+        ],
+        "crosvm_202504": [
+          "domain"
+        ],
+        "dhcp_202504": [
+          "domain"
+        ],
+        "dnsmasq_202504": [
+          "domain"
+        ],
+        "drmserver_202504": [
+          "domain"
+        ],
+        "dumpstate_202504": [
+          "domain",
+          "mlstrustedsubject"
+        ],
+        "e2fs_202504": [
+          "domain"
+        ],
+        "early_virtmgr_202504": [
+          "domain"
+        ],
+        "ephemeral_app_202504": [
+          "domain"
+        ],
+        "evsmanagerd_202504": [
+          "domain"
+        ],
+        "extra_free_kbytes_202504": [
+          "domain"
+        ],
+        "fastbootd_202504": [
+          "domain"
+        ],
+        "fingerprintd_202504": [
+          "domain"
+        ],
+        "flags_health_check_202504": [
+          "domain"
+        ],
+        "fsck_202504": [
+          "domain"
+        ],
+        "fsck_untrusted_202504": [
+          "domain"
+        ],
+        "gatekeeperd_202504": [
+          "domain"
+        ],
+        "gmscore_app_202504": [
+          "domain"
+        ],
+        "gpuservice_202504": [
+          "domain"
+        ],
+        "healthd_202504": [
+          "domain"
+        ],
+        "heapprofd_202504": [
+          "domain"
+        ],
+        "hwservicemanager_202504": [
+          "domain",
+          "mlstrustedsubject"
+        ],
+        "idmap_202504": [
+          "domain"
+        ],
+        "incident_202504": [
+          "domain"
+        ],
+        "incident_helper_202504": [
+          "domain"
+        ],
+        "incidentd_202504": [
+          "domain"
+        ],
+        "init_202504": [
+          "domain",
+          "mlstrustedsubject"
+        ],
+        "inputflinger_202504": [
+          "domain"
+        ],
+        "installd_202504": [
+          "domain"
+        ],
+        "isolated_app_202504": [
+          "domain"
+        ],
+        "isolated_compute_app_202504": [
+          "domain"
+        ],
+        "kernel_202504": [
+          "domain",
+          "mlstrustedsubject"
+        ],
+        "keystore_202504": [
+          "domain"
+        ],
+        "llkd_202504": [
+          "domain",
+          "mlstrustedsubject"
+        ],
+        "lmkd_202504": [
+          "domain",
+          "mlstrustedsubject"
+        ],
+        "logd_202504": [
+          "domain",
+          "mlstrustedsubject"
+        ],
+        "logpersist_202504": [
+          "domain"
+        ],
+        "mdnsd_202504": [
+          "domain"
+        ],
+        "mediadrmserver_202504": [
+          "domain"
+        ],
+        "mediaextractor_202504": [
+          "domain"
+        ],
+        "mediametrics_202504": [
+          "domain"
+        ],
+        "mediaprovider_202504": [
+          "domain"
+        ],
+        "mediaserver_202504": [
+          "domain"
+        ],
+        "mediaswcodec_202504": [
+          "domain"
+        ],
+        "mediatranscoding_202504": [
+          "domain"
+        ],
+        "modprobe_202504": [
+          "domain"
+        ],
+        "mtp_202504": [
+          "domain"
+        ],
+        "netd_202504": [
+          "domain",
+          "mlstrustedsubject"
+        ],
+        "netutils_wrapper_202504": [
+          "domain"
+        ],
+        "network_stack_202504": [
+          "domain"
+        ],
+        "nfc_202504": [
+          "domain"
+        ],
+        "perfetto_202504": [
+          "domain"
+        ],
+        "performanced_202504": [
+          "domain",
+          "mlstrustedsubject"
+        ],
+        "platform_app_202504": [
+          "domain"
+        ],
+        "postinstall_202504": [
+          "domain"
+        ],
+        "ppp_202504": [
+          "domain"
+        ],
+        "priv_app_202504": [
+          "domain"
+        ],
+        "prng_seeder_202504": [
+          "domain"
+        ],
+        "profman_202504": [
+          "domain"
+        ],
+        "radio_202504": [
+          "domain",
+          "mlstrustedsubject"
+        ],
+        "recovery_202504": [
+          "domain"
+        ],
+        "recovery_persist_202504": [
+          "domain"
+        ],
+        "recovery_refresh_202504": [
+          "domain"
+        ],
+        "rkpdapp_202504": [
+          "domain"
+        ],
+        "rs_202504": [
+          "domain"
+        ],
+        "rss_hwm_reset_202504": [
+          "domain",
+          "mlstrustedsubject"
+        ],
+        "runas_202504": [
+          "domain",
+          "mlstrustedsubject"
+        ],
+        "runas_app_202504": [
+          "domain"
+        ],
+        "sdcardd_202504": [
+          "domain"
+        ],
+        "secure_element_202504": [
+          "domain"
+        ],
+        "servicemanager_202504": [
+          "domain",
+          "mlstrustedsubject"
+        ],
+        "sgdisk_202504": [
+          "domain"
+        ],
+        "shared_relro_202504": [
+          "domain"
+        ],
+        "shell_202504": [
+          "domain",
+          "mlstrustedsubject"
+        ],
+        "simpleperf_202504": [
+          "domain"
+        ],
+        "simpleperf_app_runner_202504": [
+          "domain",
+          "mlstrustedsubject"
+        ],
+        "slideshow_202504": [
+          "domain"
+        ],
+        "statsd_202504": [
+          "domain",
+          "mlstrustedsubject"
+        ],
+        "su_202504": [
+          "domain"
+        ],
+        "surfaceflinger_202504": [
+          "domain"
+        ],
+        "system_app_202504": [
+          "domain"
+        ],
+        "system_server_202504": [
+          "domain"
+        ],
+        "tee_202504": [
+          "domain"
+        ],
+        "tombstoned_202504": [
+          "domain",
+          "mlstrustedsubject"
+        ],
+        "toolbox_202504": [
+          "domain"
+        ],
+        "traced_202504": [
+          "domain",
+          "mlstrustedsubject"
+        ],
+        "traced_perf_202504": [
+          "domain"
+        ],
+        "traced_probes_202504": [
+          "domain",
+          "mlstrustedsubject"
+        ],
+        "traceur_app_202504": [
+          "domain"
+        ],
+        "ueventd_202504": [
+          "domain"
+        ],
+        "uncrypt_202504": [
+          "domain",
+          "mlstrustedsubject"
+        ],
+        "untrusted_app_202504": [
+          "domain"
+        ],
+        "untrusted_app_32_202504": [
+          "domain"
+        ],
+        "untrusted_app_30_202504": [
+          "domain"
+        ],
+        "untrusted_app_29_202504": [
+          "domain"
+        ],
+        "untrusted_app_27_202504": [
+          "domain"
+        ],
+        "untrusted_app_25_202504": [
+          "domain"
+        ],
+        "update_engine_202504": [
+          "domain"
+        ],
+        "update_verifier_202504": [
+          "domain"
+        ],
+        "usbd_202504": [
+          "domain"
+        ],
+        "vdc_202504": [
+          "domain"
+        ],
+        "vendor_init_202504": [
+          "domain",
+          "mlstrustedsubject"
+        ],
+        "vendor_misc_writer_202504": [
+          "domain"
+        ],
+        "vendor_modprobe_202504": [
+          "domain"
+        ],
+        "vendor_shell_202504": [
+          "domain"
+        ],
+        "virtual_camera_202504": [
+          "domain"
+        ],
+        "virtual_touchpad_202504": [
+          "domain"
+        ],
+        "virtualizationmanager_202504": [
+          "domain"
+        ],
+        "vndservicemanager_202504": [
+          "domain"
+        ],
+        "vold_202504": [
+          "domain"
+        ],
+        "vold_prepare_subdirs_202504": [
+          "domain"
+        ],
+        "watchdogd_202504": [
+          "domain"
+        ],
+        "webview_zygote_202504": [
+          "domain"
+        ],
+        "wificond_202504": [
+          "domain"
+        ],
+        "zygote_202504": [
+          "domain"
+        ],
+        "google_camera_app_202504": [
+          "domain"
+        ],
+        "adbd_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "aidl_lazy_test_server_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "apexd_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "appdomain_tmpfs_202504": [
+          "file_type"
+        ],
+        "app_zygote_tmpfs_202504": [
+          "file_type"
+        ],
+        "audioserver_tmpfs_202504": [
+          "file_type"
+        ],
+        "bootanim_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "bootstat_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "bufferhubd_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "cameraserver_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "cameraserver_tmpfs_202504": [
+          "file_type"
+        ],
+        "charger_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "crash_dump_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "credstore_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "dhcp_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "dnsmasq_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "drmserver_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "drmserver_socket_202504": [
+          "file_type"
+        ],
+        "dumpstate_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "e2fs_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "early_virtmgr_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "extra_free_kbytes_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "unlabeled_202504": [
+          "file_type"
+        ],
+        "system_file_202504": [
+          "file_type"
+        ],
+        "system_asan_options_file_202504": [
+          "file_type"
+        ],
+        "system_event_log_tags_file_202504": [
+          "file_type"
+        ],
+        "system_lib_file_202504": [
+          "file_type"
+        ],
+        "system_bootstrap_lib_file_202504": [
+          "file_type"
+        ],
+        "system_group_file_202504": [
+          "file_type"
+        ],
+        "system_linker_exec_202504": [
+          "file_type"
+        ],
+        "system_linker_config_file_202504": [
+          "file_type"
+        ],
+        "system_passwd_file_202504": [
+          "file_type"
+        ],
+        "system_seccomp_policy_file_202504": [
+          "file_type"
+        ],
+        "system_security_cacerts_file_202504": [
+          "file_type"
+        ],
+        "tcpdump_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "system_zoneinfo_file_202504": [
+          "file_type"
+        ],
+        "cgroup_desc_file_202504": [
+          "file_type"
+        ],
+        "vendor_cgroup_desc_file_202504": [
+          "file_type",
+          "vendor_file_type"
+        ],
+        "task_profiles_file_202504": [
+          "file_type"
+        ],
+        "vendor_task_profiles_file_202504": [
+          "file_type",
+          "vendor_file_type"
+        ],
+        "art_apex_dir_202504": [
+          "file_type"
+        ],
+        "linkerconfig_file_202504": [
+          "file_type"
+        ],
+        "incremental_control_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "bootanim_oem_file_202504": [
+          "file_type"
+        ],
+        "vendor_hal_file_202504": [
+          "file_type",
+          "vendor_file_type"
+        ],
+        "vendor_file_202504": [
+          "file_type",
+          "vendor_file_type"
+        ],
+        "vendor_app_file_202504": [
+          "file_type",
+          "vendor_file_type"
+        ],
+        "vendor_configs_file_202504": [
+          "file_type",
+          "vendor_file_type"
+        ],
+        "same_process_hal_file_202504": [
+          "file_type",
+          "vendor_file_type"
+        ],
+        "vndk_sp_file_202504": [
+          "file_type",
+          "vendor_file_type"
+        ],
+        "vendor_framework_file_202504": [
+          "file_type",
+          "vendor_file_type"
+        ],
+        "vendor_overlay_file_202504": [
+          "file_type",
+          "vendor_file_type"
+        ],
+        "vendor_public_lib_file_202504": [
+          "file_type",
+          "vendor_file_type"
+        ],
+        "vendor_public_framework_file_202504": [
+          "file_type",
+          "vendor_file_type"
+        ],
+        "vendor_microdroid_file_202504": [
+          "file_type",
+          "vendor_file_type"
+        ],
+        "vendor_boot_ota_file_202504": [
+          "file_type",
+          "vendor_file_type"
+        ],
+        "vendor_keylayout_file_202504": [
+          "file_type",
+          "vendor_file_type"
+        ],
+        "vendor_keychars_file_202504": [
+          "file_type",
+          "vendor_file_type"
+        ],
+        "vendor_idc_file_202504": [
+          "file_type",
+          "vendor_file_type"
+        ],
+        "vendor_uuid_mapping_config_file_202504": [
+          "file_type",
+          "vendor_file_type"
+        ],
+        "vendor_vm_file_202504": [
+          "file_type",
+          "vendor_file_type"
+        ],
+        "vendor_vm_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "metadata_file_202504": [
+          "file_type"
+        ],
+        "vold_metadata_file_202504": [
+          "file_type"
+        ],
+        "gsi_metadata_file_202504": [
+          "file_type"
+        ],
+        "gsi_public_metadata_file_202504": [
+          "file_type"
+        ],
+        "password_slot_metadata_file_202504": [
+          "file_type"
+        ],
+        "apex_metadata_file_202504": [
+          "file_type"
+        ],
+        "ota_metadata_file_202504": [
+          "file_type"
+        ],
+        "metadata_bootstat_file_202504": [
+          "file_type"
+        ],
+        "userspace_reboot_metadata_file_202504": [
+          "file_type"
+        ],
+        "staged_install_file_202504": [
+          "file_type"
+        ],
+        "watchdog_metadata_file_202504": [
+          "file_type"
+        ],
+        "repair_mode_metadata_file_202504": [
+          "file_type"
+        ],
+        "aconfig_storage_metadata_file_202504": [
+          "file_type"
+        ],
+        "aconfig_storage_flags_metadata_file_202504": [
+          "file_type"
+        ],
+        "dev_cpu_variant_202504": [
+          "file_type"
+        ],
+        "runtime_event_log_tags_file_202504": [
+          "file_type"
+        ],
+        "logcat_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "cgroup_rc_file_202504": [
+          "file_type"
+        ],
+        "coredump_file_202504": [
+          "file_type"
+        ],
+        "system_data_root_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "system_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "system_userdir_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "packages_list_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "game_mode_intervention_list_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "vendor_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "vendor_userdir_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "unencrypted_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "install_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "drm_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "adb_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "anr_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "tombstone_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "tombstone_wifi_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "apex_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "apk_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "apk_tmp_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "apk_private_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "apk_private_tmp_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "dalvikcache_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "ota_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "ota_package_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "user_profile_root_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "user_profile_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "profman_dump_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "prereboot_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "resourcecache_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "shell_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "property_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "bootchart_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "dropbox_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "heapdump_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "nativetest_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "shell_test_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "ringtone_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "preloads_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "preloads_media_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "dhcp_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "server_configurable_flags_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "staging_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "vendor_apex_file_202504": [
+          "file_type",
+          "vendor_file_type"
+        ],
+        "vendor_apex_metadata_file_202504": [
+          "file_type",
+          "vendor_file_type"
+        ],
+        "shutdown_checkpoints_system_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "mnt_media_rw_file_202504": [
+          "file_type"
+        ],
+        "mnt_user_file_202504": [
+          "file_type"
+        ],
+        "mnt_pass_through_file_202504": [
+          "file_type"
+        ],
+        "mnt_expand_file_202504": [
+          "file_type"
+        ],
+        "mnt_sdcard_file_202504": [
+          "file_type"
+        ],
+        "storage_file_202504": [
+          "file_type"
+        ],
+        "mnt_media_rw_stub_file_202504": [
+          "file_type"
+        ],
+        "storage_stub_file_202504": [
+          "file_type"
+        ],
+        "mnt_vendor_file_202504": [
+          "file_type"
+        ],
+        "mnt_product_file_202504": [
+          "file_type"
+        ],
+        "apex_mnt_dir_202504": [
+          "file_type"
+        ],
+        "apex_info_file_202504": [
+          "file_type"
+        ],
+        "postinstall_mnt_dir_202504": [
+          "file_type"
+        ],
+        "postinstall_file_202504": [
+          "file_type"
+        ],
+        "postinstall_apex_mnt_dir_202504": [
+          "file_type"
+        ],
+        "mirror_data_file_202504": [
+          "file_type"
+        ],
+        "adb_keys_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "apex_system_server_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "apex_module_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "apex_ota_reserved_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "apex_rollback_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "appcompat_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "audio_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "audioserver_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "bluetooth_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "bluetooth_logs_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "bootstat_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "boottrace_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "camera_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "credstore_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "gatekeeper_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "incident_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "keychain_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "keystore_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "media_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "media_rw_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "media_userdir_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "misc_user_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "net_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "network_watchlist_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "nfc_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "nfc_logs_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "radio_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "recovery_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "shared_relro_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "snapshotctl_log_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "stats_config_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "stats_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "systemkeys_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "textclassifier_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "trace_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "vpn_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "wifi_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "vold_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "tee_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "update_engine_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "update_engine_log_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "snapuserd_log_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "method_trace_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "gsi_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "radio_core_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "app_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "privapp_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "system_app_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "cache_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "overlayfs_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "cache_backup_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "cache_private_backup_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "cache_recovery_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "efs_file_202504": [
+          "file_type"
+        ],
+        "wallpaper_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "shortcut_manager_icons_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "icon_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "asec_apk_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "asec_public_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "asec_image_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "backup_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "bluetooth_efs_file_202504": [
+          "file_type"
+        ],
+        "fingerprintd_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "fingerprint_vendor_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "app_fuse_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "face_vendor_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "iris_vendor_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "adbd_socket_202504": [
+          "file_type"
+        ],
+        "bluetooth_socket_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "dnsproxyd_socket_202504": [
+          "file_type"
+        ],
+        "dumpstate_socket_202504": [
+          "file_type"
+        ],
+        "fwmarkd_socket_202504": [
+          "file_type"
+        ],
+        "lmkd_socket_202504": [
+          "file_type"
+        ],
+        "logd_socket_202504": [
+          "file_type"
+        ],
+        "logdr_socket_202504": [
+          "file_type"
+        ],
+        "logdw_socket_202504": [
+          "file_type"
+        ],
+        "mdns_socket_202504": [
+          "file_type"
+        ],
+        "mdnsd_socket_202504": [
+          "file_type"
+        ],
+        "misc_logd_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "mtpd_socket_202504": [
+          "file_type"
+        ],
+        "ot_daemon_socket_202504": [
+          "file_type"
+        ],
+        "property_socket_202504": [
+          "file_type"
+        ],
+        "racoon_socket_202504": [
+          "file_type"
+        ],
+        "recovery_socket_202504": [
+          "file_type"
+        ],
+        "rild_socket_202504": [
+          "file_type"
+        ],
+        "rild_debug_socket_202504": [
+          "file_type"
+        ],
+        "snapuserd_socket_202504": [
+          "file_type"
+        ],
+        "snapuserd_proxy_socket_202504": [
+          "file_type"
+        ],
+        "statsdw_socket_202504": [
+          "file_type"
+        ],
+        "system_wpa_socket_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "system_ndebug_socket_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "system_unsolzygote_socket_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "tombstoned_crash_socket_202504": [
+          "file_type"
+        ],
+        "tombstoned_java_trace_socket_202504": [
+          "file_type"
+        ],
+        "tombstoned_intercept_socket_202504": [
+          "file_type"
+        ],
+        "traced_consumer_socket_202504": [
+          "file_type"
+        ],
+        "traced_perf_socket_202504": [
+          "file_type"
+        ],
+        "traced_producer_socket_202504": [
+          "file_type"
+        ],
+        "uncrypt_socket_202504": [
+          "file_type"
+        ],
+        "wpa_socket_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "zygote_socket_202504": [
+          "file_type"
+        ],
+        "heapprofd_socket_202504": [
+          "file_type"
+        ],
+        "gps_control_202504": [
+          "file_type"
+        ],
+        "pdx_display_dir_202504": [
+          "file_type"
+        ],
+        "pdx_performance_dir_202504": [
+          "file_type"
+        ],
+        "pdx_bufferhub_dir_202504": [
+          "file_type"
+        ],
+        "pdx_display_client_endpoint_socket_202504": [
+          "file_type",
+          "mlstrustedsubject"
+        ],
+        "pdx_display_manager_endpoint_socket_202504": [
+          "file_type",
+          "mlstrustedsubject"
+        ],
+        "pdx_display_screenshot_endpoint_socket_202504": [
+          "file_type",
+          "mlstrustedsubject"
+        ],
+        "pdx_display_vsync_endpoint_socket_202504": [
+          "file_type",
+          "mlstrustedsubject"
+        ],
+        "pdx_performance_client_endpoint_socket_202504": [
+          "file_type",
+          "mlstrustedsubject"
+        ],
+        "pdx_bufferhub_client_endpoint_socket_202504": [
+          "file_type",
+          "mlstrustedsubject"
+        ],
+        "file_contexts_file_202504": [
+          "file_type"
+        ],
+        "mac_perms_file_202504": [
+          "file_type"
+        ],
+        "property_contexts_file_202504": [
+          "file_type"
+        ],
+        "seapp_contexts_file_202504": [
+          "file_type"
+        ],
+        "sepolicy_file_202504": [
+          "file_type"
+        ],
+        "service_contexts_file_202504": [
+          "file_type"
+        ],
+        "keystore2_key_contexts_file_202504": [
+          "file_type"
+        ],
+        "vendor_service_contexts_file_202504": [
+          "file_type",
+          "vendor_file_type"
+        ],
+        "hwservice_contexts_file_202504": [
+          "file_type"
+        ],
+        "vndservice_contexts_file_202504": [
+          "file_type"
+        ],
+        "vendor_kernel_modules_202504": [
+          "file_type",
+          "vendor_file_type"
+        ],
+        "system_dlkm_file_202504": [
+          "file_type"
+        ],
+        "audiohal_data_file_202504": [
+          "file_type",
+          "data_file_type"
+        ],
+        "tee_service_contexts_file_202504": [
+          "file_type"
+        ],
+        "fingerprintd_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "flags_health_check_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "fsck_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "gatekeeperd_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "hal_graphics_composer_server_tmpfs_202504": [
+          "file_type"
+        ],
+        "hwservicemanager_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "idmap_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "init_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "init_tmpfs_202504": [
+          "file_type"
+        ],
+        "inputflinger_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "installd_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "keystore_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "llkd_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "lmkd_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "logd_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "mediadrmserver_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "mediaextractor_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "mediaextractor_tmpfs_202504": [
+          "file_type"
+        ],
+        "mediametrics_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "mediaserver_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "mediaserver_tmpfs_202504": [
+          "file_type"
+        ],
+        "mediaswcodec_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "netd_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "netutils_wrapper_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "performanced_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "profman_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "recovery_persist_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "recovery_refresh_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "rs_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "runas_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "sdcardd_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "servicemanager_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "sgdisk_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "shell_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "simpleperf_app_runner_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "statsd_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "su_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "surfaceflinger_tmpfs_202504": [
+          "file_type"
+        ],
+        "system_server_tmpfs_202504": [
+          "file_type"
+        ],
+        "tombstoned_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "toolbox_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "traced_tmpfs_202504": [
+          "file_type"
+        ],
+        "ueventd_tmpfs_202504": [
+          "file_type"
+        ],
+        "uncrypt_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "update_engine_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "update_verifier_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "usbd_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "vdc_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "vendor_misc_writer_exec_202504": [
+          "file_type",
+          "exec_type",
+          "vendor_file_type"
+        ],
+        "vendor_shell_exec_202504": [
+          "file_type",
+          "exec_type",
+          "vendor_file_type"
+        ],
+        "vendor_toolbox_exec_202504": [
+          "file_type",
+          "exec_type",
+          "vendor_file_type"
+        ],
+        "virtual_camera_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "virtual_touchpad_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "virtualizationmanager_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "vold_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "vold_prepare_subdirs_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "watchdogd_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "webview_zygote_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "webview_zygote_tmpfs_202504": [
+          "file_type"
+        ],
+        "wificond_exec_202504": [
+          "file_type",
+          "exec_type"
+        ],
+        "zygote_tmpfs_202504": [
+          "file_type"
+        ],
+        "zygote_exec_202504": [
+          "file_type",
+          "exec_type"
         ]
       },
       "typeAttrNames": [],
