@@ -98,6 +98,7 @@
       "etc/sysconfig/preinstalled-packages-platform-handheld-product.xml",
       "etc/sysconfig/preinstalled-packages-platform-overlays.xml",
       "etc/sysconfig/preinstalled-packages-platform-telephony-product.xml",
+      "etc/sysconfig/restrict-pixel-health-association.xml",
       "etc/sysconfig/whitelist_com.android.deskclock.xml",
       "etc/sysconfig/whitelist_com.android.messaging.xml",
       "fonts/ArbutusSlab-Regular.ttf",
@@ -706,6 +707,7 @@
       "system/lib64/libprocessgroup_setup.so",
       "system/lib64/libprotobuf-cpp-lite.so",
       "system/lib64/librecovery_ui.so",
+      "system/lib64/librecovery_ui_ext.so",
       "system/lib64/libselinux.so",
       "system/lib64/libsparse.so",
       "system/lib64/libsquashfs_utils.so",
@@ -3494,7 +3496,6 @@
       "lib/modules/rtl8150.ko",
       "lib/modules/slcan.ko",
       "lib/modules/slhc.ko",
-      "lib/modules/tls.ko",
       "lib/modules/usbmon.ko",
       "lib/modules/usbnet.ko",
       "lib/modules/usbserial.ko",
@@ -4276,6 +4277,7 @@
       "lib/modules/coresight-replicator.ko",
       "lib/modules/coresight-stm.ko",
       "lib/modules/coresight-tmc.ko",
+      "lib/modules/coresight-trbe.ko",
       "lib/modules/coresight.ko",
       "lib/modules/cp_pmic.ko",
       "lib/modules/cp_thermal_zone.ko",
@@ -4287,13 +4289,12 @@
       "lib/modules/ebu-google.ko",
       "lib/modules/focal_touch.ko",
       "lib/modules/fscache.ko",
-      "lib/modules/fwtp_cpm.ko",
       "lib/modules/fwtp_google_gdmc.ko",
-      "lib/modules/fwtp_lib.ko",
       "lib/modules/generic_source.ko",
       "lib/modules/gnss_spi.ko",
       "lib/modules/gnssif.ko",
       "lib/modules/goog-cpu-idle-info.ko",
+      "lib/modules/google-cpm-tracepoint.ko",
       "lib/modules/google-ehld-coreinstr.ko",
       "lib/modules/google-icc-helper-mock-client.ko",
       "lib/modules/google-irm-stub.ko",
@@ -4313,6 +4314,7 @@
       "lib/modules/google_powercap.ko",
       "lib/modules/google_powerdashboard.ko",
       "lib/modules/google_thermal_cpm_mbox.ko",
+      "lib/modules/google_thermal_pressure_tj.ko",
       "lib/modules/google_thermal_sensor.ko",
       "lib/modules/google_thermal_sensor_stats.ko",
       "lib/modules/google_thermal_uclamp.ko",
@@ -4418,8 +4420,8 @@
           "ro.system.product.cpu.abilist64": "arm64-v8a",
           "ro.system.build.date": "Sun Jun 29 00:00:00 UTC 2025",
           "ro.system.build.date.utc": "1751155200",
-          "ro.system.build.fingerprint": "google/frankel/frankel:16/BP4A.251205.006/2025062900:user/test-keys",
-          "ro.system.build.id": "BP4A.251205.006",
+          "ro.system.build.fingerprint": "google/frankel/frankel:16/BP4A.251205.006.E1/2025062900:user/test-keys",
+          "ro.system.build.id": "BP4A.251205.006.E1",
           "ro.system.build.tags": "test-keys",
           "ro.system.build.type": "user",
           "ro.system.build.version.incremental": "2025062900",
@@ -4427,7 +4429,7 @@
           "ro.system.build.version.release_or_codename": "16",
           "ro.system.build.version.sdk": "36",
           "ro.system.build.version.sdk_full": "36.1",
-          "ro.build.id": "BP4A.251205.006",
+          "ro.build.id": "BP4A.251205.006.E1",
           "ro.build.display.id": "2025062900 test-keys",
           "ro.build.version.incremental": "2025062900",
           "ro.build.version.sdk": "36",
@@ -4453,7 +4455,7 @@
           "ro.product.cpu.abi": "arm64-v8a",
           "ro.product.locale": "en-US",
           "ro.wifi.channels": "",
-          "ro.build.description": "mainline-user 16 BP4A.251205.006 2025062900 test-keys",
+          "ro.build.description": "mainline-user 16 BP4A.251205.006.E1 2025062900 test-keys",
           "ro.treble.enabled": "true",
           "ro.llndk.api_level": "202504",
           "ro.actionable_compatible_property.enabled": "true",
@@ -4531,8 +4533,8 @@
           "ro.product.manufacturer_for_attestation": "Google",
           "ro.system_ext.build.date": "Sun Jun 29 00:00:00 UTC 2025",
           "ro.system_ext.build.date.utc": "1751155200",
-          "ro.system_ext.build.fingerprint": "google/frankel/frankel:16/BP4A.251205.006/2025062900:user/test-keys",
-          "ro.system_ext.build.id": "BP4A.251205.006",
+          "ro.system_ext.build.fingerprint": "google/frankel/frankel:16/BP4A.251205.006.E1/2025062900:user/test-keys",
+          "ro.system_ext.build.id": "BP4A.251205.006.E1",
           "ro.system_ext.build.tags": "test-keys",
           "ro.system_ext.build.type": "user",
           "ro.system_ext.build.version.incremental": "2025062900",
@@ -4558,8 +4560,8 @@
           "ro.product.manufacturer_for_attestation": "Google",
           "ro.product.build.date": "Sun Jun 29 00:00:00 UTC 2025",
           "ro.product.build.date.utc": "1751155200",
-          "ro.product.build.fingerprint": "google/frankel/frankel:16/BP4A.251205.006/2025062900:user/test-keys",
-          "ro.product.build.id": "BP4A.251205.006",
+          "ro.product.build.fingerprint": "google/frankel/frankel:16/BP4A.251205.006.E1/2025062900:user/test-keys",
+          "ro.product.build.id": "BP4A.251205.006.E1",
           "ro.product.build.tags": "test-keys",
           "ro.product.build.type": "user",
           "ro.product.build.version.incremental": "2025062900",
@@ -4567,7 +4569,7 @@
           "ro.product.build.version.release_or_codename": "16",
           "ro.product.build.version.sdk": "36",
           "ro.product.build.version.sdk_full": "36.1",
-          "ro.build.id": "BP4A.251205.006",
+          "ro.build.id": "BP4A.251205.006.E1",
           "ro.build.display.id": "2025062900 test-keys",
           "ro.build.version.incremental": "2025062900",
           "ro.build.version.sdk": "36",
@@ -4593,7 +4595,7 @@
           "ro.product.cpu.abi": "arm64-v8a",
           "ro.product.locale": "en-US",
           "ro.wifi.channels": "",
-          "ro.build.description": "frankel-user 16 BP4A.251205.006 2025062900 test-keys",
+          "ro.build.description": "frankel-user 16 BP4A.251205.006.E1 2025062900 test-keys",
           "ro.product.build.16k_page.enabled": "false",
           "ro.product.page_size": "4096",
           "ro.build.characteristics": "nosdcard",
@@ -4627,8 +4629,8 @@
           "ro.vendor.product.cpu.abilist64": "arm64-v8a",
           "ro.vendor.build.date": "Sun Jun 29 00:00:00 UTC 2025",
           "ro.vendor.build.date.utc": "1751155200",
-          "ro.vendor.build.fingerprint": "google/frankel/frankel:16/BP4A.251205.006/2025062900:user/test-keys",
-          "ro.vendor.build.id": "BP4A.251205.006",
+          "ro.vendor.build.fingerprint": "google/frankel/frankel:16/BP4A.251205.006.E1/2025062900:user/test-keys",
+          "ro.vendor.build.id": "BP4A.251205.006.E1",
           "ro.vendor.build.tags": "test-keys",
           "ro.vendor.build.type": "user",
           "ro.vendor.build.version.incremental": "2025062900",
@@ -4698,8 +4700,8 @@
           "ro.odm.product.cpu.abilist64": "arm64-v8a",
           "ro.odm.build.date": "Sun Jun 29 00:00:00 UTC 2025",
           "ro.odm.build.date.utc": "1751155200",
-          "ro.odm.build.fingerprint": "google/frankel/frankel:16/BP4A.251205.006/2025062900:user/test-keys",
-          "ro.odm.build.id": "BP4A.251205.006",
+          "ro.odm.build.fingerprint": "google/frankel/frankel:16/BP4A.251205.006.E1/2025062900:user/test-keys",
+          "ro.odm.build.id": "BP4A.251205.006.E1",
           "ro.odm.build.tags": "test-keys",
           "ro.odm.build.type": "user",
           "ro.odm.build.version.incremental": "2025062900",
@@ -4724,8 +4726,8 @@
           "ro.product.manufacturer_for_attestation": "Google",
           "ro.system_dlkm.build.date": "Sun Jun 29 00:00:00 UTC 2025",
           "ro.system_dlkm.build.date.utc": "1751155200",
-          "ro.system_dlkm.build.fingerprint": "google/frankel/frankel:16/BP4A.251205.006/2025062900:user/test-keys",
-          "ro.system_dlkm.build.id": "BP4A.251205.006",
+          "ro.system_dlkm.build.fingerprint": "google/frankel/frankel:16/BP4A.251205.006.E1/2025062900:user/test-keys",
+          "ro.system_dlkm.build.id": "BP4A.251205.006.E1",
           "ro.system_dlkm.build.tags": "test-keys",
           "ro.system_dlkm.build.type": "user",
           "ro.system_dlkm.build.version.incremental": "2025062900",
@@ -4750,8 +4752,8 @@
           "ro.product.manufacturer_for_attestation": "Google",
           "ro.vendor_dlkm.build.date": "Sun Jun 29 00:00:00 UTC 2025",
           "ro.vendor_dlkm.build.date.utc": "1751155200",
-          "ro.vendor_dlkm.build.fingerprint": "google/frankel/frankel:16/BP4A.251205.006/2025062900:user/test-keys",
-          "ro.vendor_dlkm.build.id": "BP4A.251205.006",
+          "ro.vendor_dlkm.build.fingerprint": "google/frankel/frankel:16/BP4A.251205.006.E1/2025062900:user/test-keys",
+          "ro.vendor_dlkm.build.id": "BP4A.251205.006.E1",
           "ro.vendor_dlkm.build.tags": "test-keys",
           "ro.vendor_dlkm.build.type": "user",
           "ro.vendor_dlkm.build.version.incremental": "2025062900",
@@ -4776,8 +4778,8 @@
           "ro.product.manufacturer_for_attestation": "Google",
           "ro.odm_dlkm.build.date": "Sun Jun 29 00:00:00 UTC 2025",
           "ro.odm_dlkm.build.date.utc": "1751155200",
-          "ro.odm_dlkm.build.fingerprint": "google/frankel/frankel:16/BP4A.251205.006/2025062900:user/test-keys",
-          "ro.odm_dlkm.build.id": "BP4A.251205.006",
+          "ro.odm_dlkm.build.fingerprint": "google/frankel/frankel:16/BP4A.251205.006.E1/2025062900:user/test-keys",
+          "ro.odm_dlkm.build.id": "BP4A.251205.006.E1",
           "ro.odm_dlkm.build.tags": "test-keys",
           "ro.odm_dlkm.build.type": "user",
           "ro.odm_dlkm.build.version.incremental": "2025062900",
@@ -4800,8 +4802,8 @@
           "ro.system.product.cpu.abilist64": "arm64-v8a",
           "ro.system.build.date": "Sun Jun 29 00:00:00 UTC 2025",
           "ro.system.build.date.utc": "1751155200",
-          "ro.system.build.fingerprint": "google/frankel/frankel:16/BP4A.251205.006/2025062900:user/test-keys",
-          "ro.system.build.id": "BP4A.251205.006",
+          "ro.system.build.fingerprint": "google/frankel/frankel:16/BP4A.251205.006.E1/2025062900:user/test-keys",
+          "ro.system.build.id": "BP4A.251205.006.E1",
           "ro.system.build.tags": "test-keys",
           "ro.system.build.type": "user",
           "ro.system.build.version.incremental": "2025062900",
@@ -4809,7 +4811,7 @@
           "ro.system.build.version.release_or_codename": "16",
           "ro.system.build.version.sdk": "36",
           "ro.system.build.version.sdk_full": "36.1",
-          "ro.build.id": "BP4A.251205.006",
+          "ro.build.id": "BP4A.251205.006.E1",
           "ro.build.display.id": "2025062900 test-keys",
           "ro.build.version.incremental": "2025062900",
           "ro.build.version.sdk": "36",
@@ -4835,7 +4837,7 @@
           "ro.product.cpu.abi": "arm64-v8a",
           "ro.product.locale": "en-US",
           "ro.wifi.channels": "",
-          "ro.build.description": "frankel-user 16 BP4A.251205.006 2025062900 test-keys",
+          "ro.build.description": "frankel-user 16 BP4A.251205.006.E1 2025062900 test-keys",
           "ro.treble.enabled": "true",
           "ro.llndk.api_level": "202504",
           "ro.actionable_compatible_property.enabled": "true",
@@ -4911,8 +4913,8 @@
           "ro.vendor.product.cpu.abilist64": "arm64-v8a",
           "ro.vendor.build.date": "Sun Jun 29 00:00:00 UTC 2025",
           "ro.vendor.build.date.utc": "1751155200",
-          "ro.vendor.build.fingerprint": "google/frankel/frankel:16/BP4A.251205.006/2025062900:user/test-keys",
-          "ro.vendor.build.id": "BP4A.251205.006",
+          "ro.vendor.build.fingerprint": "google/frankel/frankel:16/BP4A.251205.006.E1/2025062900:user/test-keys",
+          "ro.vendor.build.id": "BP4A.251205.006.E1",
           "ro.vendor.build.tags": "test-keys",
           "ro.vendor.build.type": "user",
           "ro.vendor.build.version.incremental": "2025062900",
@@ -4972,8 +4974,8 @@
           "ro.odm.product.cpu.abilist64": "arm64-v8a",
           "ro.odm.build.date": "Sun Jun 29 00:00:00 UTC 2025",
           "ro.odm.build.date.utc": "1751155200",
-          "ro.odm.build.fingerprint": "google/frankel/frankel:16/BP4A.251205.006/2025062900:user/test-keys",
-          "ro.odm.build.id": "BP4A.251205.006",
+          "ro.odm.build.fingerprint": "google/frankel/frankel:16/BP4A.251205.006.E1/2025062900:user/test-keys",
+          "ro.odm.build.id": "BP4A.251205.006.E1",
           "ro.odm.build.tags": "test-keys",
           "ro.odm.build.type": "user",
           "ro.odm.build.version.incremental": "2025062900",
@@ -4988,8 +4990,8 @@
           "ro.product.product.name": "frankel",
           "ro.product.build.date": "Sun Jun 29 00:00:00 UTC 2025",
           "ro.product.build.date.utc": "1751155200",
-          "ro.product.build.fingerprint": "google/frankel/frankel:16/BP4A.251205.006/2025062900:user/test-keys",
-          "ro.product.build.id": "BP4A.251205.006",
+          "ro.product.build.fingerprint": "google/frankel/frankel:16/BP4A.251205.006.E1/2025062900:user/test-keys",
+          "ro.product.build.id": "BP4A.251205.006.E1",
           "ro.product.build.tags": "test-keys",
           "ro.product.build.type": "user",
           "ro.product.build.version.incremental": "2025062900",
@@ -5016,8 +5018,8 @@
           "ro.product.system_ext.name": "frankel",
           "ro.system_ext.build.date": "Sun Jun 29 00:00:00 UTC 2025",
           "ro.system_ext.build.date.utc": "1751155200",
-          "ro.system_ext.build.fingerprint": "google/frankel/frankel:16/BP4A.251205.006/2025062900:user/test-keys",
-          "ro.system_ext.build.id": "BP4A.251205.006",
+          "ro.system_ext.build.fingerprint": "google/frankel/frankel:16/BP4A.251205.006.E1/2025062900:user/test-keys",
+          "ro.system_ext.build.id": "BP4A.251205.006.E1",
           "ro.system_ext.build.tags": "test-keys",
           "ro.system_ext.build.type": "user",
           "ro.system_ext.build.version.incremental": "2025062900",
@@ -5094,6 +5096,7 @@
     }
   },
   "sysConfigs": [
+    "<allow-association target=\"com.google.android.pixel.health\" allowed=\"\"/>",
     "<allow-implicit-broadcast action=\"android.intent.action.ACTION_DEFAULT_DATA_SUBSCRIPTION_CHANGED\"/>",
     "<allow-implicit-broadcast action=\"android.intent.action.ACTION_DEFAULT_VOICE_SUBSCRIPTION_CHANGED\"/>",
     "<allow-implicit-broadcast action=\"android.intent.action.DATA_SMS_RECEIVED\"/>",
@@ -45070,9 +45073,927 @@
       ]
     },
     "system_ext": {
-      "types": {},
+      "types": {
+        "systemui_app": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "adbd": [
+          "domain",
+          "coredomain"
+        ],
+        "aidl_lazy_test_server": [
+          "domain"
+        ],
+        "apexd": [
+          "domain",
+          "coredomain"
+        ],
+        "app_zygote": [
+          "domain",
+          "coredomain"
+        ],
+        "artd": [
+          "domain",
+          "coredomain"
+        ],
+        "atrace": [
+          "domain",
+          "coredomain"
+        ],
+        "audioserver": [
+          "domain",
+          "coredomain"
+        ],
+        "blkid": [
+          "domain",
+          "coredomain"
+        ],
+        "blkid_untrusted": [
+          "domain",
+          "coredomain"
+        ],
+        "bluetooth": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "bootanim": [
+          "domain",
+          "coredomain"
+        ],
+        "bootstat": [
+          "domain",
+          "coredomain"
+        ],
+        "bpfloader": [
+          "domain",
+          "coredomain"
+        ],
+        "bufferhubd": [
+          "domain",
+          "coredomain"
+        ],
+        "cameraserver": [
+          "domain",
+          "coredomain"
+        ],
+        "charger": [
+          "domain",
+          "coredomain"
+        ],
+        "charger_vendor": [
+          "domain"
+        ],
+        "crash_dump": [
+          "domain",
+          "coredomain"
+        ],
+        "credstore": [
+          "domain",
+          "coredomain"
+        ],
+        "crosvm": [
+          "domain",
+          "coredomain"
+        ],
+        "dhcp": [
+          "domain",
+          "coredomain"
+        ],
+        "dnsmasq": [
+          "domain",
+          "coredomain"
+        ],
+        "drmserver": [
+          "domain",
+          "coredomain"
+        ],
+        "dumpstate": [
+          "domain",
+          "coredomain"
+        ],
+        "e2fs": [
+          "domain",
+          "coredomain"
+        ],
+        "early_virtmgr": [
+          "domain",
+          "coredomain"
+        ],
+        "ephemeral_app": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "evsmanagerd": [
+          "domain",
+          "coredomain"
+        ],
+        "extra_free_kbytes": [
+          "domain",
+          "coredomain"
+        ],
+        "fastbootd": [
+          "domain",
+          "coredomain"
+        ],
+        "fingerprintd": [
+          "domain",
+          "coredomain"
+        ],
+        "flags_health_check": [
+          "domain",
+          "coredomain"
+        ],
+        "fsck": [
+          "domain",
+          "coredomain"
+        ],
+        "fsck_untrusted": [
+          "domain",
+          "coredomain"
+        ],
+        "gatekeeperd": [
+          "domain",
+          "coredomain"
+        ],
+        "gmscore_app": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "gpuservice": [
+          "domain",
+          "coredomain"
+        ],
+        "healthd": [
+          "domain",
+          "coredomain"
+        ],
+        "heapprofd": [
+          "domain",
+          "coredomain"
+        ],
+        "hwservicemanager": [
+          "domain",
+          "coredomain"
+        ],
+        "idmap": [
+          "domain",
+          "coredomain"
+        ],
+        "incident": [
+          "domain",
+          "coredomain"
+        ],
+        "incident_helper": [
+          "domain",
+          "coredomain"
+        ],
+        "incidentd": [
+          "domain",
+          "coredomain"
+        ],
+        "init": [
+          "domain",
+          "coredomain"
+        ],
+        "inputflinger": [
+          "domain",
+          "coredomain"
+        ],
+        "installd": [
+          "domain",
+          "coredomain"
+        ],
+        "isolated_app": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "isolated_compute_app": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "kernel": [
+          "domain",
+          "coredomain"
+        ],
+        "keystore": [
+          "domain",
+          "coredomain"
+        ],
+        "llkd": [
+          "domain",
+          "coredomain"
+        ],
+        "lmkd": [
+          "domain",
+          "coredomain"
+        ],
+        "logd": [
+          "domain",
+          "coredomain"
+        ],
+        "logpersist": [
+          "domain",
+          "coredomain"
+        ],
+        "mdnsd": [
+          "domain",
+          "coredomain"
+        ],
+        "mediadrmserver": [
+          "domain",
+          "coredomain"
+        ],
+        "mediaextractor": [
+          "domain",
+          "coredomain"
+        ],
+        "mediametrics": [
+          "domain",
+          "coredomain"
+        ],
+        "mediaprovider": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "mediaserver": [
+          "domain",
+          "coredomain"
+        ],
+        "mediaswcodec": [
+          "domain",
+          "coredomain"
+        ],
+        "mediatranscoding": [
+          "domain",
+          "coredomain"
+        ],
+        "modprobe": [
+          "domain",
+          "coredomain"
+        ],
+        "mtp": [
+          "domain"
+        ],
+        "netd": [
+          "domain",
+          "coredomain"
+        ],
+        "netutils_wrapper": [
+          "domain",
+          "coredomain"
+        ],
+        "network_stack": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "nfc": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "perfetto": [
+          "domain",
+          "coredomain"
+        ],
+        "performanced": [
+          "domain",
+          "coredomain"
+        ],
+        "platform_app": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "postinstall": [
+          "domain",
+          "coredomain"
+        ],
+        "ppp": [
+          "domain"
+        ],
+        "priv_app": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "prng_seeder": [
+          "domain",
+          "coredomain"
+        ],
+        "profman": [
+          "domain",
+          "coredomain"
+        ],
+        "radio": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "recovery": [
+          "domain",
+          "coredomain"
+        ],
+        "recovery_persist": [
+          "domain",
+          "coredomain"
+        ],
+        "recovery_refresh": [
+          "domain",
+          "coredomain"
+        ],
+        "rkpdapp": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "rs": [
+          "domain",
+          "coredomain"
+        ],
+        "rss_hwm_reset": [
+          "domain",
+          "coredomain"
+        ],
+        "runas": [
+          "domain",
+          "coredomain"
+        ],
+        "runas_app": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "sdcardd": [
+          "domain",
+          "coredomain"
+        ],
+        "secure_element": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "servicemanager": [
+          "domain",
+          "coredomain"
+        ],
+        "sgdisk": [
+          "domain",
+          "coredomain"
+        ],
+        "shared_relro": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "shell": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "simpleperf": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "simpleperf_app_runner": [
+          "domain",
+          "coredomain"
+        ],
+        "slideshow": [
+          "domain",
+          "coredomain"
+        ],
+        "statsd": [
+          "domain",
+          "coredomain"
+        ],
+        "su": [
+          "domain"
+        ],
+        "surfaceflinger": [
+          "domain",
+          "coredomain"
+        ],
+        "system_app": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "system_server": [
+          "domain",
+          "coredomain"
+        ],
+        "tee": [
+          "domain"
+        ],
+        "tombstoned": [
+          "domain",
+          "coredomain"
+        ],
+        "toolbox": [
+          "domain",
+          "coredomain"
+        ],
+        "traced": [
+          "domain",
+          "coredomain"
+        ],
+        "traced_perf": [
+          "domain",
+          "coredomain"
+        ],
+        "traced_probes": [
+          "domain",
+          "coredomain"
+        ],
+        "traceur_app": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "ueventd": [
+          "domain",
+          "coredomain"
+        ],
+        "uncrypt": [
+          "domain",
+          "coredomain"
+        ],
+        "untrusted_app": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "untrusted_app_32": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "untrusted_app_30": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "untrusted_app_29": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "untrusted_app_27": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "untrusted_app_25": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "update_engine": [
+          "domain",
+          "coredomain"
+        ],
+        "update_verifier": [
+          "domain",
+          "coredomain"
+        ],
+        "usbd": [
+          "domain",
+          "coredomain"
+        ],
+        "vdc": [
+          "domain",
+          "coredomain"
+        ],
+        "vendor_init": [
+          "domain"
+        ],
+        "vendor_misc_writer": [
+          "domain"
+        ],
+        "vendor_modprobe": [
+          "domain"
+        ],
+        "vendor_shell": [
+          "domain"
+        ],
+        "virtual_camera": [
+          "domain",
+          "coredomain"
+        ],
+        "virtual_touchpad": [
+          "domain",
+          "coredomain"
+        ],
+        "virtualizationmanager": [
+          "domain",
+          "coredomain"
+        ],
+        "vndservicemanager": [
+          "domain"
+        ],
+        "vold": [
+          "domain",
+          "coredomain"
+        ],
+        "vold_prepare_subdirs": [
+          "domain",
+          "coredomain"
+        ],
+        "watchdogd": [
+          "domain",
+          "coredomain"
+        ],
+        "webview_zygote": [
+          "domain",
+          "coredomain"
+        ],
+        "wificond": [
+          "domain",
+          "coredomain"
+        ],
+        "zygote": [
+          "domain",
+          "coredomain"
+        ],
+        "aconfigd": [
+          "domain",
+          "coredomain"
+        ],
+        "aconfigd_mainline": [
+          "domain",
+          "coredomain"
+        ],
+        "adbd_tradeinmode": [
+          "domain",
+          "coredomain"
+        ],
+        "adservices": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "apex_test_prepostinstall": [
+          "domain",
+          "coredomain"
+        ],
+        "apexd_derive_classpath": [
+          "domain",
+          "coredomain"
+        ],
+        "art_boot": [
+          "domain",
+          "coredomain"
+        ],
+        "art_exec": [
+          "domain",
+          "coredomain"
+        ],
+        "auditctl": [
+          "domain",
+          "coredomain"
+        ],
+        "automotive_display_service": [
+          "domain",
+          "coredomain"
+        ],
+        "bert_collector": [
+          "domain",
+          "coredomain"
+        ],
+        "blank_screen": [
+          "domain",
+          "coredomain"
+        ],
+        "boringssl_self_test": [
+          "domain",
+          "coredomain"
+        ],
+        "vendor_boringssl_self_test": [
+          "domain"
+        ],
+        "canhalconfigurator": [
+          "domain",
+          "coredomain"
+        ],
+        "clatd": [
+          "domain",
+          "coredomain"
+        ],
+        "compos_fd_server": [
+          "domain",
+          "coredomain"
+        ],
+        "compos_verify": [
+          "domain",
+          "coredomain"
+        ],
+        "composd": [
+          "domain",
+          "coredomain"
+        ],
+        "cppreopts": [
+          "domain",
+          "coredomain"
+        ],
+        "derive_classpath": [
+          "domain",
+          "coredomain"
+        ],
+        "derive_sdk": [
+          "domain",
+          "coredomain"
+        ],
+        "device_as_webcam": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "dex2oat": [
+          "domain",
+          "coredomain"
+        ],
+        "dexopt_chroot_setup": [
+          "domain",
+          "coredomain"
+        ],
+        "dmesgd": [
+          "domain",
+          "coredomain"
+        ],
+        "fuseblkd": [
+          "domain",
+          "coredomain"
+        ],
+        "fuseblkd_untrusted": [
+          "domain",
+          "coredomain"
+        ],
+        "fwk_bufferhub": [
+          "domain",
+          "coredomain"
+        ],
+        "gki_apex_prepostinstall": [
+          "domain",
+          "coredomain"
+        ],
+        "gsid": [
+          "domain",
+          "coredomain"
+        ],
+        "hal_allocator_default": [
+          "domain",
+          "coredomain"
+        ],
+        "hal_keymint_system": [
+          "domain",
+          "coredomain"
+        ],
+        "hal_widevine_system": [
+          "domain",
+          "coredomain"
+        ],
+        "hidl_lazy_test_server": [
+          "domain"
+        ],
+        "init_dev_config": [
+          "domain"
+        ],
+        "iw": [
+          "domain",
+          "coredomain"
+        ],
+        "kcmdlinectrl": [
+          "domain",
+          "coredomain"
+        ],
+        "linkerconfig": [
+          "domain",
+          "coredomain"
+        ],
+        "linux_vm_setup": [
+          "domain",
+          "coredomain"
+        ],
+        "logviewer_app": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "lpdumpd": [
+          "domain",
+          "coredomain"
+        ],
+        "mediaprovider_app": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "mediatuner": [
+          "domain",
+          "coredomain"
+        ],
+        "memcgv2_activation_depth": [
+          "domain",
+          "coredomain"
+        ],
+        "migrate_legacy_obb_data": [
+          "domain",
+          "coredomain"
+        ],
+        "misctrl": [
+          "domain",
+          "coredomain"
+        ],
+        "mm_events": [
+          "domain",
+          "coredomain"
+        ],
+        "mmd": [
+          "domain",
+          "coredomain"
+        ],
+        "mtectrl": [
+          "domain",
+          "coredomain"
+        ],
+        "odrefresh": [
+          "domain",
+          "coredomain"
+        ],
+        "odsign": [
+          "domain",
+          "coredomain"
+        ],
+        "omapi": [
+          "domain",
+          "coredomain"
+        ],
+        "ot_ctl": [
+          "domain",
+          "coredomain"
+        ],
+        "ot_daemon": [
+          "domain",
+          "coredomain"
+        ],
+        "overlay_remounter": [
+          "domain",
+          "coredomain"
+        ],
+        "permissioncontroller_app": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "prefetch": [
+          "domain",
+          "coredomain"
+        ],
+        "preopt2cachename": [
+          "domain",
+          "coredomain"
+        ],
+        "profcollectd": [
+          "domain",
+          "coredomain"
+        ],
+        "remount": [
+          "domain",
+          "coredomain"
+        ],
+        "rkp_cert_processor": [
+          "domain",
+          "coredomain"
+        ],
+        "rkpd": [
+          "domain",
+          "coredomain"
+        ],
+        "sdk_sandbox_34": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "sdk_sandbox_audit": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "sdk_sandbox_next": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "simpleperf_boot": [
+          "domain",
+          "coredomain"
+        ],
+        "snapshotctl": [
+          "domain",
+          "coredomain"
+        ],
+        "snapuserd": [
+          "domain",
+          "coredomain"
+        ],
+        "stats": [
+          "domain",
+          "coredomain"
+        ],
+        "storaged": [
+          "domain",
+          "coredomain"
+        ],
+        "system_suspend": [
+          "domain",
+          "coredomain"
+        ],
+        "trace_redactor": [
+          "domain",
+          "coredomain"
+        ],
+        "tradeinmode": [
+          "domain",
+          "coredomain"
+        ],
+        "updater_app": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "uprobestats": [
+          "domain",
+          "coredomain"
+        ],
+        "userdata_alias_remove": [
+          "domain",
+          "coredomain"
+        ],
+        "vehicle_binding_util": [
+          "domain",
+          "coredomain"
+        ],
+        "vfio_handler": [
+          "domain",
+          "coredomain"
+        ],
+        "virtual_face": [
+          "domain",
+          "coredomain"
+        ],
+        "virtual_fingerprint": [
+          "domain",
+          "coredomain"
+        ],
+        "virtualizationservice": [
+          "domain",
+          "coredomain"
+        ],
+        "vmlauncher_app": [
+          "domain",
+          "appdomain",
+          "coredomain"
+        ],
+        "vmnic": [
+          "domain",
+          "coredomain"
+        ],
+        "vzwomatrigger_app": [
+          "domain",
+          "appdomain"
+        ],
+        "wait_for_keymaster": [
+          "domain",
+          "coredomain"
+        ],
+        "wifi_mainline_supplicant": [
+          "domain",
+          "coredomain"
+        ],
+        "zygote_next": [
+          "domain",
+          "coredomain"
+        ]
+      },
       "typeAttrNames": [],
-      "cil": [],
+      "cil": [
+        "(typeattributeset domain (adbd aidl_lazy_test_server apexd app_zygote artd atrace audioserver blkid blkid_untrusted bluetooth bootanim bootstat bpfloader bufferhubd cameraserver charger charger_vendor crash_dump credstore crosvm dhcp dnsmasq drmserver dumpstate e2fs early_virtmgr ephemeral_app evsmanagerd extra_free_kbytes fastbootd fingerprintd flags_health_check fsck fsck_untrusted gatekeeperd gmscore_app gpuservice healthd heapprofd hwservicemanager idmap incident incident_helper incidentd init inputflinger installd isolated_app isolated_compute_app kernel keystore llkd lmkd logd logpersist mdnsd mediadrmserver mediaextractor mediametrics mediaprovider mediaserver mediaswcodec mediatranscoding modprobe mtp netd netutils_wrapper network_stack nfc perfetto performanced platform_app postinstall ppp priv_app prng_seeder profman radio recovery recovery_persist recovery_refresh rkpdapp rs rss_hwm_reset runas runas_app sdcardd secure_element servicemanager sgdisk shared_relro shell simpleperf simpleperf_app_runner slideshow statsd su surfaceflinger system_app system_server tee tombstoned toolbox traced traced_perf traced_probes traceur_app ueventd uncrypt untrusted_app untrusted_app_32 untrusted_app_30 untrusted_app_29 untrusted_app_27 untrusted_app_25 update_engine update_verifier usbd vdc vendor_init vendor_misc_writer vendor_modprobe vendor_shell virtual_camera virtual_touchpad virtualizationmanager vndservicemanager vold vold_prepare_subdirs watchdogd webview_zygote wificond zygote aconfigd aconfigd_mainline adbd_tradeinmode adservices apex_test_prepostinstall apexd_derive_classpath art_boot art_exec auditctl automotive_display_service bert_collector blank_screen boringssl_self_test vendor_boringssl_self_test canhalconfigurator clatd compos_fd_server compos_verify composd cppreopts derive_classpath derive_sdk device_as_webcam dex2oat dexopt_chroot_setup dmesgd fuseblkd fuseblkd_untrusted fwk_bufferhub gki_apex_prepostinstall gsid hal_allocator_default hal_keymint_system hal_widevine_system hidl_lazy_test_server init_dev_config iw kcmdlinectrl linkerconfig linux_vm_setup logviewer_app lpdumpd mediaprovider_app mediatuner memcgv2_activation_depth migrate_legacy_obb_data misctrl mm_events mmd mtectrl odrefresh odsign omapi ot_ctl ot_daemon overlay_remounter permissioncontroller_app prefetch preopt2cachename profcollectd remount rkp_cert_processor rkpd sdk_sandbox_34 sdk_sandbox_audit sdk_sandbox_next simpleperf_boot snapshotctl snapuserd stats storaged system_suspend trace_redactor tradeinmode updater_app uprobestats userdata_alias_remove vehicle_binding_util vfio_handler virtual_face virtual_fingerprint virtualizationservice vmlauncher_app vmnic vzwomatrigger_app wait_for_keymaster wifi_mainline_supplicant zygote_next systemui_app))",
+        "(typeattributeset appdomain (bluetooth ephemeral_app gmscore_app isolated_app isolated_compute_app mediaprovider network_stack nfc platform_app priv_app radio rkpdapp runas_app secure_element shared_relro shell simpleperf system_app traceur_app untrusted_app untrusted_app_32 untrusted_app_30 untrusted_app_29 untrusted_app_27 untrusted_app_25 adservices device_as_webcam logviewer_app mediaprovider_app permissioncontroller_app sdk_sandbox_34 sdk_sandbox_audit sdk_sandbox_next updater_app vmlauncher_app vzwomatrigger_app systemui_app))",
+        "(typeattributeset coredomain (adbd apexd app_zygote artd atrace audioserver blkid blkid_untrusted bluetooth bootanim bootstat bpfloader bufferhubd cameraserver charger crash_dump credstore crosvm dhcp dnsmasq drmserver dumpstate e2fs early_virtmgr ephemeral_app evsmanagerd extra_free_kbytes fastbootd fingerprintd flags_health_check fsck fsck_untrusted gatekeeperd gmscore_app gpuservice healthd heapprofd hwservicemanager idmap incident incident_helper incidentd init inputflinger installd isolated_app isolated_compute_app kernel keystore llkd lmkd logd logpersist mdnsd mediadrmserver mediaextractor mediametrics mediaprovider mediaserver mediaswcodec mediatranscoding modprobe netd netutils_wrapper network_stack nfc perfetto performanced platform_app postinstall priv_app prng_seeder profman radio recovery recovery_persist recovery_refresh rkpdapp rs rss_hwm_reset runas runas_app sdcardd secure_element servicemanager sgdisk shared_relro shell simpleperf simpleperf_app_runner slideshow statsd surfaceflinger system_app system_server tombstoned toolbox traced traced_perf traced_probes traceur_app ueventd uncrypt untrusted_app untrusted_app_32 untrusted_app_30 untrusted_app_29 untrusted_app_27 untrusted_app_25 update_engine update_verifier usbd vdc virtual_camera virtual_touchpad virtualizationmanager vold vold_prepare_subdirs watchdogd webview_zygote wificond zygote aconfigd aconfigd_mainline adbd_tradeinmode adservices apex_test_prepostinstall apexd_derive_classpath art_boot art_exec auditctl automotive_display_service bert_collector blank_screen boringssl_self_test canhalconfigurator clatd compos_fd_server compos_verify composd cppreopts derive_classpath derive_sdk device_as_webcam dex2oat dexopt_chroot_setup dmesgd fuseblkd fuseblkd_untrusted fwk_bufferhub gki_apex_prepostinstall gsid hal_allocator_default hal_keymint_system hal_widevine_system iw kcmdlinectrl linkerconfig linux_vm_setup logviewer_app lpdumpd mediaprovider_app mediatuner memcgv2_activation_depth migrate_legacy_obb_data misctrl mm_events mmd mtectrl odrefresh odsign omapi ot_ctl ot_daemon overlay_remounter permissioncontroller_app prefetch preopt2cachename profcollectd remount rkp_cert_processor rkpd sdk_sandbox_34 sdk_sandbox_audit sdk_sandbox_next simpleperf_boot snapshotctl snapuserd stats storaged system_suspend trace_redactor tradeinmode updater_app uprobestats userdata_alias_remove vehicle_binding_util vfio_handler virtual_face virtual_fingerprint virtualizationservice vmlauncher_app vmnic wait_for_keymaster wifi_mainline_supplicant zygote_next systemui_app))",
+        "(type systemui_app)",
+        "(roletype object_r systemui_app)",
+        "(allow systemui_app nfc_service (service_manager (find)))"
+      ],
       "contexts": {
         "system_ext_file_contexts": [],
         "system_ext_hwservice_contexts": [],
@@ -45751,11 +46672,14 @@
         ],
         "zygote_next": [
           "domain"
+        ],
+        "systemui_app": [
+          "domain"
         ]
       },
       "typeAttrNames": [],
       "cil": [
-        "(typeattributeset domain (adbd aidl_lazy_test_server apexd app_zygote artd atrace audioserver blkid blkid_untrusted bluetooth bootanim bootstat bpfloader bufferhubd cameraserver charger charger_vendor crash_dump credstore crosvm dhcp dnsmasq drmserver dumpstate e2fs early_virtmgr ephemeral_app evsmanagerd extra_free_kbytes fastbootd fingerprintd flags_health_check fsck fsck_untrusted gatekeeperd gmscore_app gpuservice healthd heapprofd hwservicemanager idmap incident incident_helper incidentd init inputflinger installd isolated_app isolated_compute_app kernel keystore llkd lmkd logd logpersist mdnsd mediadrmserver mediaextractor mediametrics mediaprovider mediaserver mediaswcodec mediatranscoding modprobe mtp netd netutils_wrapper network_stack nfc perfetto performanced platform_app postinstall ppp priv_app prng_seeder profman radio recovery recovery_persist recovery_refresh rkpdapp rs rss_hwm_reset runas runas_app sdcardd secure_element servicemanager sgdisk shared_relro shell simpleperf simpleperf_app_runner slideshow statsd su surfaceflinger system_app system_server tee tombstoned toolbox traced traced_perf traced_probes traceur_app ueventd uncrypt untrusted_app untrusted_app_32 untrusted_app_30 untrusted_app_29 untrusted_app_27 untrusted_app_25 update_engine update_verifier usbd vdc vendor_init vendor_misc_writer vendor_modprobe vendor_shell virtual_camera virtual_touchpad virtualizationmanager vndservicemanager vold vold_prepare_subdirs watchdogd webview_zygote wificond zygote aconfigd aconfigd_mainline adbd_tradeinmode adservices apex_test_prepostinstall apexd_derive_classpath art_boot art_exec auditctl automotive_display_service bert_collector blank_screen boringssl_self_test vendor_boringssl_self_test canhalconfigurator clatd compos_fd_server compos_verify composd cppreopts derive_classpath derive_sdk device_as_webcam dex2oat dexopt_chroot_setup dmesgd fuseblkd fuseblkd_untrusted fwk_bufferhub gki_apex_prepostinstall gsid hal_allocator_default hal_keymint_system hal_widevine_system hidl_lazy_test_server init_dev_config iw kcmdlinectrl linkerconfig linux_vm_setup logviewer_app lpdumpd mediaprovider_app mediatuner memcgv2_activation_depth migrate_legacy_obb_data misctrl mm_events mmd mtectrl odrefresh odsign omapi ot_ctl ot_daemon overlay_remounter permissioncontroller_app prefetch preopt2cachename profcollectd remount rkp_cert_processor rkpd sdk_sandbox_34 sdk_sandbox_audit sdk_sandbox_next simpleperf_boot snapshotctl snapuserd stats storaged system_suspend trace_redactor tradeinmode updater_app uprobestats userdata_alias_remove vehicle_binding_util vfio_handler virtual_face virtual_fingerprint virtualizationservice vmlauncher_app vmnic vzwomatrigger_app wait_for_keymaster wifi_mainline_supplicant zygote_next google_camera_app))",
+        "(typeattributeset domain (adbd aidl_lazy_test_server apexd app_zygote artd atrace audioserver blkid blkid_untrusted bluetooth bootanim bootstat bpfloader bufferhubd cameraserver charger charger_vendor crash_dump credstore crosvm dhcp dnsmasq drmserver dumpstate e2fs early_virtmgr ephemeral_app evsmanagerd extra_free_kbytes fastbootd fingerprintd flags_health_check fsck fsck_untrusted gatekeeperd gmscore_app gpuservice healthd heapprofd hwservicemanager idmap incident incident_helper incidentd init inputflinger installd isolated_app isolated_compute_app kernel keystore llkd lmkd logd logpersist mdnsd mediadrmserver mediaextractor mediametrics mediaprovider mediaserver mediaswcodec mediatranscoding modprobe mtp netd netutils_wrapper network_stack nfc perfetto performanced platform_app postinstall ppp priv_app prng_seeder profman radio recovery recovery_persist recovery_refresh rkpdapp rs rss_hwm_reset runas runas_app sdcardd secure_element servicemanager sgdisk shared_relro shell simpleperf simpleperf_app_runner slideshow statsd su surfaceflinger system_app system_server tee tombstoned toolbox traced traced_perf traced_probes traceur_app ueventd uncrypt untrusted_app untrusted_app_32 untrusted_app_30 untrusted_app_29 untrusted_app_27 untrusted_app_25 update_engine update_verifier usbd vdc vendor_init vendor_misc_writer vendor_modprobe vendor_shell virtual_camera virtual_touchpad virtualizationmanager vndservicemanager vold vold_prepare_subdirs watchdogd webview_zygote wificond zygote aconfigd aconfigd_mainline adbd_tradeinmode adservices apex_test_prepostinstall apexd_derive_classpath art_boot art_exec auditctl automotive_display_service bert_collector blank_screen boringssl_self_test vendor_boringssl_self_test canhalconfigurator clatd compos_fd_server compos_verify composd cppreopts derive_classpath derive_sdk device_as_webcam dex2oat dexopt_chroot_setup dmesgd fuseblkd fuseblkd_untrusted fwk_bufferhub gki_apex_prepostinstall gsid hal_allocator_default hal_keymint_system hal_widevine_system hidl_lazy_test_server init_dev_config iw kcmdlinectrl linkerconfig linux_vm_setup logviewer_app lpdumpd mediaprovider_app mediatuner memcgv2_activation_depth migrate_legacy_obb_data misctrl mm_events mmd mtectrl odrefresh odsign omapi ot_ctl ot_daemon overlay_remounter permissioncontroller_app prefetch preopt2cachename profcollectd remount rkp_cert_processor rkpd sdk_sandbox_34 sdk_sandbox_audit sdk_sandbox_next simpleperf_boot snapshotctl snapuserd stats storaged system_suspend trace_redactor tradeinmode updater_app uprobestats userdata_alias_remove vehicle_binding_util vfio_handler virtual_face virtual_fingerprint virtualizationservice vmlauncher_app vmnic vzwomatrigger_app wait_for_keymaster wifi_mainline_supplicant zygote_next systemui_app google_camera_app))",
         "(type google_camera_app)",
         "(roletype object_r google_camera_app)"
       ],
@@ -47354,6 +48278,9 @@
         "zygote_202504": [
           "domain"
         ],
+        "systemui_app_202504": [
+          "domain"
+        ],
         "google_camera_app_202504": [
           "domain"
         ],
@@ -48563,7 +49490,7 @@
       "typeAttrNames": [],
       "cil": [
         "(typeattributeset dev_type (device_202504 ashmem_device_202504 ashmem_libcutils_device_202504 audio_device_202504 binder_device_202504 hwbinder_device_202504 vndbinder_device_202504 block_device_202504 bt_device_202504 camera_device_202504 dm_device_202504 ublk_block_device_202504 dm_user_device_202504 ublk_control_device_202504 keychord_device_202504 loop_control_device_202504 loop_device_202504 pmsg_device_202504 radio_device_202504 ram_device_202504 rtc_device_202504 vd_device_202504 vold_device_202504 console_device_202504 fscklogs_202504 gpu_device_202504 graphics_device_202504 hw_random_device_202504 input_device_202504 port_device_202504 lowpan_device_202504 mtp_device_202504 nfc_device_202504 ptmx_device_202504 kmsg_device_202504 kmsg_debug_device_202504 null_device_202504 random_device_202504 secure_element_device_202504 sensors_device_202504 serial_device_202504 socket_device_202504 owntty_device_202504 tty_device_202504 video_device_202504 zero_device_202504 fuse_device_202504 iio_device_202504 ion_device_202504 dmabuf_heap_device_202504 dmabuf_system_heap_device_202504 dmabuf_system_secure_heap_device_202504 qtaguid_device_202504 watchdog_device_202504 uhid_device_202504 uio_device_202504 tun_device_202504 usbaccessory_device_202504 usb_device_202504 usb_serial_device_202504 gnss_device_202504 properties_device_202504 properties_serial_202504 property_info_202504 hidraw_device_202504 hci_attach_dev_202504 rpmsg_device_202504 root_block_device_202504 frp_block_device_202504 system_block_device_202504 recovery_block_device_202504 boot_block_device_202504 dtbo_block_device_202504 userdata_block_device_202504 zoned_block_device_202504 cache_block_device_202504 swap_block_device_202504 metadata_block_device_202504 misc_block_device_202504 super_block_device_202504 sdcard_block_device_202504 userdata_sysdev_202504 rootdisk_sysdev_202504 vfio_device_202504 tee_device_202504 rebootescrow_device))",
-        "(typeattributeset domain (adbd_202504 aidl_lazy_test_server_202504 apexd_202504 app_zygote_202504 artd_202504 atrace_202504 audioserver_202504 blkid_202504 blkid_untrusted_202504 bluetooth_202504 bootanim_202504 bootstat_202504 bpfloader_202504 bufferhubd_202504 cameraserver_202504 charger_202504 charger_vendor_202504 crash_dump_202504 credstore_202504 crosvm_202504 dhcp_202504 dnsmasq_202504 drmserver_202504 dumpstate_202504 e2fs_202504 early_virtmgr_202504 ephemeral_app_202504 evsmanagerd_202504 extra_free_kbytes_202504 fastbootd_202504 fingerprintd_202504 flags_health_check_202504 fsck_202504 fsck_untrusted_202504 gatekeeperd_202504 gmscore_app_202504 gpuservice_202504 healthd_202504 heapprofd_202504 hwservicemanager_202504 idmap_202504 incident_202504 incident_helper_202504 incidentd_202504 init_202504 inputflinger_202504 installd_202504 isolated_app_202504 isolated_compute_app_202504 kernel_202504 keystore_202504 llkd_202504 lmkd_202504 logd_202504 logpersist_202504 mdnsd_202504 mediadrmserver_202504 mediaextractor_202504 mediametrics_202504 mediaprovider_202504 mediaserver_202504 mediaswcodec_202504 mediatranscoding_202504 modprobe_202504 mtp_202504 netd_202504 netutils_wrapper_202504 network_stack_202504 nfc_202504 perfetto_202504 performanced_202504 platform_app_202504 postinstall_202504 ppp_202504 priv_app_202504 prng_seeder_202504 profman_202504 radio_202504 recovery_202504 recovery_persist_202504 recovery_refresh_202504 rkpdapp_202504 rs_202504 rss_hwm_reset_202504 runas_202504 runas_app_202504 sdcardd_202504 secure_element_202504 servicemanager_202504 sgdisk_202504 shared_relro_202504 shell_202504 simpleperf_202504 simpleperf_app_runner_202504 slideshow_202504 statsd_202504 su_202504 surfaceflinger_202504 system_app_202504 system_server_202504 tee_202504 tombstoned_202504 toolbox_202504 traced_202504 traced_perf_202504 traced_probes_202504 traceur_app_202504 ueventd_202504 uncrypt_202504 untrusted_app_202504 untrusted_app_32_202504 untrusted_app_30_202504 untrusted_app_29_202504 untrusted_app_27_202504 untrusted_app_25_202504 update_engine_202504 update_verifier_202504 usbd_202504 vdc_202504 vendor_init_202504 vendor_misc_writer_202504 vendor_modprobe_202504 vendor_shell_202504 virtual_camera_202504 virtual_touchpad_202504 virtualizationmanager_202504 vndservicemanager_202504 vold_202504 vold_prepare_subdirs_202504 watchdogd_202504 webview_zygote_202504 wificond_202504 zygote_202504 google_camera_app_202504 hal_atrace_default hal_audio_default hal_audiocontrol_default hal_authgraph_default hal_authsecret_default hal_bluetooth_btlinux hal_bluetooth_default hal_bootctl_default hal_broadcastradio_default hal_camera_default hal_can_socketcan hal_cas_default hal_configstore_default hal_confirmationui_default hal_contexthub_default hal_drm_clearkey_aidl hal_drm_default hal_dumpstate_default hal_evs_default hal_face_default hal_fastboot_default hal_fingerprint_default hal_gatekeeper_default hal_gnss_default hal_graphics_allocator_default hal_graphics_composer_default hal_health_default hal_health_storage_default hal_hwcrypto_default hal_identity_default hal_input_classifier_default hal_input_processor_default hal_ir_default hal_ivn_default hal_keymaster_default hal_keymint_default hal_light_default hal_lowpan_default hal_macsec_default hal_mediaquality_default hal_memtrack_default hal_nfc_default hal_oemlock_default hal_power_default hal_power_stats_default hal_radio_config_default hal_radio_default hal_rebootescrow_default hal_remoteaccess_default hal_secretkeeper_default hal_secure_element_default hal_sensors_default hal_tetheroffload_default hal_thermal_default hal_threadnetwork_default hal_tv_cec_default hal_tv_hdmi_cec_default hal_tv_hdmi_connection_default hal_tv_hdmi_earc_default hal_tv_input_default hal_tv_tuner_default hal_usb_default hal_usb_gadget_default hal_uwb_default hal_vehicle_default hal_vibrator_default hal_vm_capabilities_default hal_vr_default hal_weaver_default hal_wifi_default hal_wifi_hostapd_default hal_wifi_supplicant_default mediacodec ot_rcp rild vendor_install_recovery wpa_supplicant_macsec dump_gsc))",
+        "(typeattributeset domain (adbd_202504 aidl_lazy_test_server_202504 apexd_202504 app_zygote_202504 artd_202504 atrace_202504 audioserver_202504 blkid_202504 blkid_untrusted_202504 bluetooth_202504 bootanim_202504 bootstat_202504 bpfloader_202504 bufferhubd_202504 cameraserver_202504 charger_202504 charger_vendor_202504 crash_dump_202504 credstore_202504 crosvm_202504 dhcp_202504 dnsmasq_202504 drmserver_202504 dumpstate_202504 e2fs_202504 early_virtmgr_202504 ephemeral_app_202504 evsmanagerd_202504 extra_free_kbytes_202504 fastbootd_202504 fingerprintd_202504 flags_health_check_202504 fsck_202504 fsck_untrusted_202504 gatekeeperd_202504 gmscore_app_202504 gpuservice_202504 healthd_202504 heapprofd_202504 hwservicemanager_202504 idmap_202504 incident_202504 incident_helper_202504 incidentd_202504 init_202504 inputflinger_202504 installd_202504 isolated_app_202504 isolated_compute_app_202504 kernel_202504 keystore_202504 llkd_202504 lmkd_202504 logd_202504 logpersist_202504 mdnsd_202504 mediadrmserver_202504 mediaextractor_202504 mediametrics_202504 mediaprovider_202504 mediaserver_202504 mediaswcodec_202504 mediatranscoding_202504 modprobe_202504 mtp_202504 netd_202504 netutils_wrapper_202504 network_stack_202504 nfc_202504 perfetto_202504 performanced_202504 platform_app_202504 postinstall_202504 ppp_202504 priv_app_202504 prng_seeder_202504 profman_202504 radio_202504 recovery_202504 recovery_persist_202504 recovery_refresh_202504 rkpdapp_202504 rs_202504 rss_hwm_reset_202504 runas_202504 runas_app_202504 sdcardd_202504 secure_element_202504 servicemanager_202504 sgdisk_202504 shared_relro_202504 shell_202504 simpleperf_202504 simpleperf_app_runner_202504 slideshow_202504 statsd_202504 su_202504 surfaceflinger_202504 system_app_202504 system_server_202504 tee_202504 tombstoned_202504 toolbox_202504 traced_202504 traced_perf_202504 traced_probes_202504 traceur_app_202504 ueventd_202504 uncrypt_202504 untrusted_app_202504 untrusted_app_32_202504 untrusted_app_30_202504 untrusted_app_29_202504 untrusted_app_27_202504 untrusted_app_25_202504 update_engine_202504 update_verifier_202504 usbd_202504 vdc_202504 vendor_init_202504 vendor_misc_writer_202504 vendor_modprobe_202504 vendor_shell_202504 virtual_camera_202504 virtual_touchpad_202504 virtualizationmanager_202504 vndservicemanager_202504 vold_202504 vold_prepare_subdirs_202504 watchdogd_202504 webview_zygote_202504 wificond_202504 zygote_202504 systemui_app_202504 google_camera_app_202504 hal_atrace_default hal_audio_default hal_audiocontrol_default hal_authgraph_default hal_authsecret_default hal_bluetooth_btlinux hal_bluetooth_default hal_bootctl_default hal_broadcastradio_default hal_camera_default hal_can_socketcan hal_cas_default hal_configstore_default hal_confirmationui_default hal_contexthub_default hal_drm_clearkey_aidl hal_drm_default hal_dumpstate_default hal_evs_default hal_face_default hal_fastboot_default hal_fingerprint_default hal_gatekeeper_default hal_gnss_default hal_graphics_allocator_default hal_graphics_composer_default hal_health_default hal_health_storage_default hal_hwcrypto_default hal_identity_default hal_input_classifier_default hal_input_processor_default hal_ir_default hal_ivn_default hal_keymaster_default hal_keymint_default hal_light_default hal_lowpan_default hal_macsec_default hal_mediaquality_default hal_memtrack_default hal_nfc_default hal_oemlock_default hal_power_default hal_power_stats_default hal_radio_config_default hal_radio_default hal_rebootescrow_default hal_remoteaccess_default hal_secretkeeper_default hal_secure_element_default hal_sensors_default hal_tetheroffload_default hal_thermal_default hal_threadnetwork_default hal_tv_cec_default hal_tv_hdmi_cec_default hal_tv_hdmi_connection_default hal_tv_hdmi_earc_default hal_tv_input_default hal_tv_tuner_default hal_usb_default hal_usb_gadget_default hal_uwb_default hal_vehicle_default hal_vibrator_default hal_vm_capabilities_default hal_vr_default hal_weaver_default hal_wifi_default hal_wifi_hostapd_default hal_wifi_supplicant_default mediacodec ot_rcp rild vendor_install_recovery wpa_supplicant_macsec dump_gsc))",
         "(typeattributeset file_type (adbd_exec_202504 aidl_lazy_test_server_exec_202504 apexd_exec_202504 appdomain_tmpfs_202504 app_zygote_tmpfs_202504 audioserver_tmpfs_202504 bootanim_exec_202504 bootstat_exec_202504 bufferhubd_exec_202504 cameraserver_exec_202504 cameraserver_tmpfs_202504 charger_exec_202504 crash_dump_exec_202504 credstore_exec_202504 dhcp_exec_202504 dnsmasq_exec_202504 drmserver_exec_202504 drmserver_socket_202504 dumpstate_exec_202504 e2fs_exec_202504 early_virtmgr_exec_202504 extra_free_kbytes_exec_202504 unlabeled_202504 system_file_202504 system_asan_options_file_202504 system_event_log_tags_file_202504 system_lib_file_202504 system_bootstrap_lib_file_202504 system_group_file_202504 system_linker_exec_202504 system_linker_config_file_202504 system_passwd_file_202504 system_seccomp_policy_file_202504 system_security_cacerts_file_202504 tcpdump_exec_202504 system_zoneinfo_file_202504 cgroup_desc_file_202504 vendor_cgroup_desc_file_202504 task_profiles_file_202504 vendor_task_profiles_file_202504 art_apex_dir_202504 linkerconfig_file_202504 incremental_control_file_202504 bootanim_oem_file_202504 vendor_hal_file_202504 vendor_file_202504 vendor_app_file_202504 vendor_configs_file_202504 same_process_hal_file_202504 vndk_sp_file_202504 vendor_framework_file_202504 vendor_overlay_file_202504 vendor_public_lib_file_202504 vendor_public_framework_file_202504 vendor_microdroid_file_202504 vendor_boot_ota_file_202504 vendor_keylayout_file_202504 vendor_keychars_file_202504 vendor_idc_file_202504 vendor_uuid_mapping_config_file_202504 vendor_vm_file_202504 vendor_vm_data_file_202504 metadata_file_202504 vold_metadata_file_202504 gsi_metadata_file_202504 gsi_public_metadata_file_202504 password_slot_metadata_file_202504 apex_metadata_file_202504 ota_metadata_file_202504 metadata_bootstat_file_202504 userspace_reboot_metadata_file_202504 staged_install_file_202504 watchdog_metadata_file_202504 repair_mode_metadata_file_202504 aconfig_storage_metadata_file_202504 aconfig_storage_flags_metadata_file_202504 dev_cpu_variant_202504 runtime_event_log_tags_file_202504 logcat_exec_202504 cgroup_rc_file_202504 coredump_file_202504 system_data_root_file_202504 system_data_file_202504 system_userdir_file_202504 packages_list_file_202504 game_mode_intervention_list_file_202504 vendor_data_file_202504 vendor_userdir_file_202504 unencrypted_data_file_202504 install_data_file_202504 drm_data_file_202504 adb_data_file_202504 anr_data_file_202504 tombstone_data_file_202504 tombstone_wifi_data_file_202504 apex_data_file_202504 apk_data_file_202504 apk_tmp_file_202504 apk_private_data_file_202504 apk_private_tmp_file_202504 dalvikcache_data_file_202504 ota_data_file_202504 ota_package_file_202504 user_profile_root_file_202504 user_profile_data_file_202504 profman_dump_data_file_202504 prereboot_data_file_202504 resourcecache_data_file_202504 shell_data_file_202504 property_data_file_202504 bootchart_data_file_202504 dropbox_data_file_202504 heapdump_data_file_202504 nativetest_data_file_202504 shell_test_data_file_202504 ringtone_file_202504 preloads_data_file_202504 preloads_media_file_202504 dhcp_data_file_202504 server_configurable_flags_data_file_202504 staging_data_file_202504 vendor_apex_file_202504 vendor_apex_metadata_file_202504 shutdown_checkpoints_system_data_file_202504 mnt_media_rw_file_202504 mnt_user_file_202504 mnt_pass_through_file_202504 mnt_expand_file_202504 mnt_sdcard_file_202504 storage_file_202504 mnt_media_rw_stub_file_202504 storage_stub_file_202504 mnt_vendor_file_202504 mnt_product_file_202504 apex_mnt_dir_202504 apex_info_file_202504 postinstall_mnt_dir_202504 postinstall_file_202504 postinstall_apex_mnt_dir_202504 mirror_data_file_202504 adb_keys_file_202504 apex_system_server_data_file_202504 apex_module_data_file_202504 apex_ota_reserved_file_202504 apex_rollback_data_file_202504 appcompat_data_file_202504 audio_data_file_202504 audioserver_data_file_202504 bluetooth_data_file_202504 bluetooth_logs_data_file_202504 bootstat_data_file_202504 boottrace_data_file_202504 camera_data_file_202504 credstore_data_file_202504 gatekeeper_data_file_202504 incident_data_file_202504 keychain_data_file_202504 keystore_data_file_202504 media_data_file_202504 media_rw_data_file_202504 media_userdir_file_202504 misc_user_data_file_202504 net_data_file_202504 network_watchlist_data_file_202504 nfc_data_file_202504 nfc_logs_data_file_202504 radio_data_file_202504 recovery_data_file_202504 shared_relro_file_202504 snapshotctl_log_data_file_202504 stats_config_data_file_202504 stats_data_file_202504 systemkeys_data_file_202504 textclassifier_data_file_202504 trace_data_file_202504 vpn_data_file_202504 wifi_data_file_202504 vold_data_file_202504 tee_data_file_202504 update_engine_data_file_202504 update_engine_log_data_file_202504 snapuserd_log_data_file_202504 method_trace_data_file_202504 gsi_data_file_202504 radio_core_data_file_202504 app_data_file_202504 privapp_data_file_202504 system_app_data_file_202504 cache_file_202504 overlayfs_file_202504 cache_backup_file_202504 cache_private_backup_file_202504 cache_recovery_file_202504 efs_file_202504 wallpaper_file_202504 shortcut_manager_icons_202504 icon_file_202504 asec_apk_file_202504 asec_public_file_202504 asec_image_file_202504 backup_data_file_202504 bluetooth_efs_file_202504 fingerprintd_data_file_202504 fingerprint_vendor_data_file_202504 app_fuse_file_202504 face_vendor_data_file_202504 iris_vendor_data_file_202504 adbd_socket_202504 bluetooth_socket_202504 dnsproxyd_socket_202504 dumpstate_socket_202504 fwmarkd_socket_202504 lmkd_socket_202504 logd_socket_202504 logdr_socket_202504 logdw_socket_202504 mdns_socket_202504 mdnsd_socket_202504 misc_logd_file_202504 mtpd_socket_202504 ot_daemon_socket_202504 property_socket_202504 racoon_socket_202504 recovery_socket_202504 rild_socket_202504 rild_debug_socket_202504 snapuserd_socket_202504 snapuserd_proxy_socket_202504 statsdw_socket_202504 system_wpa_socket_202504 system_ndebug_socket_202504 system_unsolzygote_socket_202504 tombstoned_crash_socket_202504 tombstoned_java_trace_socket_202504 tombstoned_intercept_socket_202504 traced_consumer_socket_202504 traced_perf_socket_202504 traced_producer_socket_202504 uncrypt_socket_202504 wpa_socket_202504 zygote_socket_202504 heapprofd_socket_202504 gps_control_202504 pdx_display_dir_202504 pdx_performance_dir_202504 pdx_bufferhub_dir_202504 pdx_display_client_endpoint_socket_202504 pdx_display_manager_endpoint_socket_202504 pdx_display_screenshot_endpoint_socket_202504 pdx_display_vsync_endpoint_socket_202504 pdx_performance_client_endpoint_socket_202504 pdx_bufferhub_client_endpoint_socket_202504 file_contexts_file_202504 mac_perms_file_202504 property_contexts_file_202504 seapp_contexts_file_202504 sepolicy_file_202504 service_contexts_file_202504 keystore2_key_contexts_file_202504 vendor_service_contexts_file_202504 hwservice_contexts_file_202504 vndservice_contexts_file_202504 vendor_kernel_modules_202504 system_dlkm_file_202504 audiohal_data_file_202504 tee_service_contexts_file_202504 fingerprintd_exec_202504 flags_health_check_exec_202504 fsck_exec_202504 gatekeeperd_exec_202504 hal_graphics_composer_server_tmpfs_202504 hwservicemanager_exec_202504 idmap_exec_202504 init_exec_202504 init_tmpfs_202504 inputflinger_exec_202504 installd_exec_202504 keystore_exec_202504 llkd_exec_202504 lmkd_exec_202504 logd_exec_202504 mediadrmserver_exec_202504 mediaextractor_exec_202504 mediaextractor_tmpfs_202504 mediametrics_exec_202504 mediaserver_exec_202504 mediaserver_tmpfs_202504 mediaswcodec_exec_202504 netd_exec_202504 netutils_wrapper_exec_202504 performanced_exec_202504 profman_exec_202504 recovery_persist_exec_202504 recovery_refresh_exec_202504 rs_exec_202504 runas_exec_202504 sdcardd_exec_202504 servicemanager_exec_202504 sgdisk_exec_202504 shell_exec_202504 simpleperf_app_runner_exec_202504 statsd_exec_202504 su_exec_202504 surfaceflinger_tmpfs_202504 system_server_tmpfs_202504 tombstoned_exec_202504 toolbox_exec_202504 traced_tmpfs_202504 ueventd_tmpfs_202504 uncrypt_exec_202504 update_engine_exec_202504 update_verifier_exec_202504 usbd_exec_202504 vdc_exec_202504 vendor_misc_writer_exec_202504 vendor_shell_exec_202504 vendor_toolbox_exec_202504 virtual_camera_exec_202504 virtual_touchpad_exec_202504 virtualizationmanager_exec_202504 vold_exec_202504 vold_prepare_subdirs_exec_202504 watchdogd_exec_202504 webview_zygote_exec_202504 webview_zygote_tmpfs_202504 wificond_exec_202504 zygote_tmpfs_202504 zygote_exec_202504 hostapd_data_file wpa_data_file hal_atrace_default_exec hal_audio_default_exec hal_audiocontrol_default_exec hal_authgraph_default_exec hal_authsecret_default_exec hal_bluetooth_btlinux_exec hal_bluetooth_default_exec hal_bootctl_default_exec hal_broadcastradio_default_exec hal_camera_default_exec hal_can_socketcan_exec hal_cas_default_exec hal_configstore_default_exec hal_confirmationui_default_exec hal_contexthub_default_exec hal_drm_clearkey_aidl_exec hal_drm_default_exec hal_dumpstate_default_exec hal_evs_default_exec hal_face_default_exec hal_fastboot_default_exec hal_fingerprint_default_exec hal_gatekeeper_default_exec hal_gnss_default_exec hal_graphics_allocator_default_tmpfs hal_graphics_allocator_default_exec hal_graphics_composer_default_exec hal_health_default_exec hal_health_storage_default_exec hal_hwcrypto_default_exec hal_identity_default_exec hal_input_classifier_default_exec hal_input_processor_default_exec hal_ir_default_exec hal_ivn_default_exec hal_keymaster_default_exec hal_keymint_default_exec hal_light_default_exec hal_lowpan_default_exec hal_macsec_default_exec hal_mediaquality_default_exec hal_memtrack_default_exec hal_nfc_default_exec hal_oemlock_default_exec hal_power_default_exec hal_power_stats_default_exec hal_radio_config_default_exec hal_radio_default_exec hal_rebootescrow_default_exec hal_remoteaccess_default_exec hal_secretkeeper_default_exec hal_secure_element_default_exec hal_sensors_default_exec hal_tetheroffload_default_exec hal_thermal_default_exec hal_threadnetwork_default_exec hal_tv_cec_default_exec hal_tv_hdmi_cec_default_exec hal_tv_hdmi_connection_default_exec hal_tv_hdmi_earc_default_exec hal_tv_input_default_exec hal_tv_tuner_default_exec hal_usb_default_exec hal_usb_gadget_default_exec hal_uwb_default_exec hal_vehicle_default_exec hal_vibrator_default_exec hal_vm_capabilities_default_exec hal_vr_default_exec hal_weaver_default_exec hal_wifi_default_exec hal_wifi_hostapd_default_exec hal_wifi_supplicant_default_exec mediacodec_exec ot_rcp_exec rild_exec tee_exec vendor_install_recovery_exec vndservicemanager_exec wpa_supplicant_macsec_exec citadel_updater))",
         "(typeattributeset exec_type (adbd_exec_202504 aidl_lazy_test_server_exec_202504 apexd_exec_202504 bootanim_exec_202504 bootstat_exec_202504 bufferhubd_exec_202504 cameraserver_exec_202504 charger_exec_202504 crash_dump_exec_202504 credstore_exec_202504 dhcp_exec_202504 dnsmasq_exec_202504 drmserver_exec_202504 dumpstate_exec_202504 e2fs_exec_202504 early_virtmgr_exec_202504 extra_free_kbytes_exec_202504 tcpdump_exec_202504 logcat_exec_202504 fingerprintd_exec_202504 flags_health_check_exec_202504 fsck_exec_202504 gatekeeperd_exec_202504 hwservicemanager_exec_202504 idmap_exec_202504 init_exec_202504 inputflinger_exec_202504 installd_exec_202504 keystore_exec_202504 llkd_exec_202504 lmkd_exec_202504 logd_exec_202504 mediadrmserver_exec_202504 mediaextractor_exec_202504 mediametrics_exec_202504 mediaserver_exec_202504 mediaswcodec_exec_202504 netd_exec_202504 netutils_wrapper_exec_202504 performanced_exec_202504 profman_exec_202504 recovery_persist_exec_202504 recovery_refresh_exec_202504 rs_exec_202504 runas_exec_202504 sdcardd_exec_202504 servicemanager_exec_202504 sgdisk_exec_202504 shell_exec_202504 simpleperf_app_runner_exec_202504 statsd_exec_202504 su_exec_202504 tombstoned_exec_202504 toolbox_exec_202504 uncrypt_exec_202504 update_engine_exec_202504 update_verifier_exec_202504 usbd_exec_202504 vdc_exec_202504 vendor_misc_writer_exec_202504 vendor_shell_exec_202504 vendor_toolbox_exec_202504 virtual_camera_exec_202504 virtual_touchpad_exec_202504 virtualizationmanager_exec_202504 vold_exec_202504 vold_prepare_subdirs_exec_202504 watchdogd_exec_202504 webview_zygote_exec_202504 wificond_exec_202504 zygote_exec_202504 hal_atrace_default_exec hal_audio_default_exec hal_audiocontrol_default_exec hal_authgraph_default_exec hal_authsecret_default_exec hal_bluetooth_btlinux_exec hal_bluetooth_default_exec hal_bootctl_default_exec hal_broadcastradio_default_exec hal_camera_default_exec hal_can_socketcan_exec hal_cas_default_exec hal_configstore_default_exec hal_confirmationui_default_exec hal_contexthub_default_exec hal_drm_clearkey_aidl_exec hal_drm_default_exec hal_dumpstate_default_exec hal_evs_default_exec hal_face_default_exec hal_fastboot_default_exec hal_fingerprint_default_exec hal_gatekeeper_default_exec hal_gnss_default_exec hal_graphics_allocator_default_exec hal_graphics_composer_default_exec hal_health_default_exec hal_health_storage_default_exec hal_hwcrypto_default_exec hal_identity_default_exec hal_input_classifier_default_exec hal_input_processor_default_exec hal_ir_default_exec hal_ivn_default_exec hal_keymaster_default_exec hal_keymint_default_exec hal_light_default_exec hal_lowpan_default_exec hal_macsec_default_exec hal_mediaquality_default_exec hal_memtrack_default_exec hal_nfc_default_exec hal_oemlock_default_exec hal_power_default_exec hal_power_stats_default_exec hal_radio_config_default_exec hal_radio_default_exec hal_rebootescrow_default_exec hal_remoteaccess_default_exec hal_secretkeeper_default_exec hal_secure_element_default_exec hal_sensors_default_exec hal_tetheroffload_default_exec hal_thermal_default_exec hal_threadnetwork_default_exec hal_tv_cec_default_exec hal_tv_hdmi_cec_default_exec hal_tv_hdmi_connection_default_exec hal_tv_hdmi_earc_default_exec hal_tv_input_default_exec hal_tv_tuner_default_exec hal_usb_default_exec hal_usb_gadget_default_exec hal_uwb_default_exec hal_vehicle_default_exec hal_vibrator_default_exec hal_vm_capabilities_default_exec hal_vr_default_exec hal_weaver_default_exec hal_wifi_default_exec hal_wifi_hostapd_default_exec hal_wifi_supplicant_default_exec mediacodec_exec ot_rcp_exec rild_exec tee_exec vendor_install_recovery_exec vndservicemanager_exec wpa_supplicant_macsec_exec citadel_updater))",
         "(typeattributeset data_file_type (incremental_control_file_202504 vendor_vm_data_file_202504 system_data_root_file_202504 system_data_file_202504 system_userdir_file_202504 packages_list_file_202504 game_mode_intervention_list_file_202504 vendor_data_file_202504 vendor_userdir_file_202504 unencrypted_data_file_202504 install_data_file_202504 drm_data_file_202504 adb_data_file_202504 anr_data_file_202504 tombstone_data_file_202504 tombstone_wifi_data_file_202504 apex_data_file_202504 apk_data_file_202504 apk_tmp_file_202504 apk_private_data_file_202504 apk_private_tmp_file_202504 dalvikcache_data_file_202504 ota_data_file_202504 ota_package_file_202504 user_profile_root_file_202504 user_profile_data_file_202504 profman_dump_data_file_202504 prereboot_data_file_202504 resourcecache_data_file_202504 shell_data_file_202504 property_data_file_202504 bootchart_data_file_202504 dropbox_data_file_202504 heapdump_data_file_202504 nativetest_data_file_202504 shell_test_data_file_202504 ringtone_file_202504 preloads_data_file_202504 preloads_media_file_202504 dhcp_data_file_202504 server_configurable_flags_data_file_202504 staging_data_file_202504 shutdown_checkpoints_system_data_file_202504 adb_keys_file_202504 apex_system_server_data_file_202504 apex_module_data_file_202504 apex_ota_reserved_file_202504 apex_rollback_data_file_202504 appcompat_data_file_202504 audio_data_file_202504 audioserver_data_file_202504 bluetooth_data_file_202504 bluetooth_logs_data_file_202504 bootstat_data_file_202504 boottrace_data_file_202504 camera_data_file_202504 credstore_data_file_202504 gatekeeper_data_file_202504 incident_data_file_202504 keychain_data_file_202504 keystore_data_file_202504 media_data_file_202504 media_rw_data_file_202504 media_userdir_file_202504 misc_user_data_file_202504 net_data_file_202504 network_watchlist_data_file_202504 nfc_data_file_202504 nfc_logs_data_file_202504 radio_data_file_202504 recovery_data_file_202504 shared_relro_file_202504 snapshotctl_log_data_file_202504 stats_config_data_file_202504 stats_data_file_202504 systemkeys_data_file_202504 textclassifier_data_file_202504 trace_data_file_202504 vpn_data_file_202504 wifi_data_file_202504 vold_data_file_202504 tee_data_file_202504 update_engine_data_file_202504 update_engine_log_data_file_202504 snapuserd_log_data_file_202504 method_trace_data_file_202504 gsi_data_file_202504 radio_core_data_file_202504 app_data_file_202504 privapp_data_file_202504 system_app_data_file_202504 cache_file_202504 overlayfs_file_202504 cache_backup_file_202504 cache_private_backup_file_202504 cache_recovery_file_202504 wallpaper_file_202504 shortcut_manager_icons_202504 icon_file_202504 asec_apk_file_202504 asec_public_file_202504 asec_image_file_202504 backup_data_file_202504 fingerprintd_data_file_202504 fingerprint_vendor_data_file_202504 app_fuse_file_202504 face_vendor_data_file_202504 iris_vendor_data_file_202504 bluetooth_socket_202504 misc_logd_file_202504 system_wpa_socket_202504 system_ndebug_socket_202504 system_unsolzygote_socket_202504 wpa_socket_202504 audiohal_data_file_202504 hostapd_data_file wpa_data_file))",
@@ -50239,6 +51166,7 @@
           "allow cameraserver system_app : fd { use };",
           "allow cameraserver system_file : dir { ioctl read getattr lock open watch watch_reads search };",
           "allow cameraserver system_server : fd { use };",
+          "allow cameraserver systemui_app : fd { use };",
           "allow cameraserver traceur_app : fd { use };",
           "allow cameraserver untrusted_app : fd { use };",
           "allow cameraserver untrusted_app_25 : fd { use };",
@@ -50404,6 +51332,7 @@
           "allow dumpstate sysfs_wlan_fwpath : file { write lock append map open };",
           "allow dumpstate system_app : fd { use };",
           "allow dumpstate system_server : fd { use };",
+          "allow dumpstate systemui_app : fd { use };",
           "allow dumpstate tee_device : chr_file { ioctl read write getattr lock append map open watch watch_reads };",
           "allow dumpstate traceur_app : fd { use };",
           "allow dumpstate uhid_device : chr_file { ioctl read write getattr lock append map open watch watch_reads };",
@@ -51700,6 +52629,7 @@
           "allow system_server system_server : cap_userns { kill setgid setuid net_bind_service net_broadcast net_admin net_raw ipc_lock sys_ptrace sys_boot sys_nice sys_time sys_tty_config };",
           "allow system_server system_server : capability { kill setgid setuid net_bind_service net_broadcast net_admin net_raw ipc_lock sys_ptrace sys_boot sys_nice sys_time sys_tty_config };",
           "allow system_server system_server : packet_socket { ioctl read write create getattr setattr lock append map bind connect getopt setopt shutdown };",
+          "allow system_server systemui_app : fd { use };",
           "allow system_server traceur_app : fd { use };",
           "allow system_server untrusted_app : fd { use };",
           "allow system_server untrusted_app_25 : fd { use };",
@@ -51717,6 +52647,13 @@
           "allow system_server wifi_prop : property_service { set };",
           "allow system_suspend_server hal_audio_default : binder { transfer };",
           "allow system_suspend_server recovery : binder { transfer };",
+          "allow systemui_app audioserver : fd { use };",
+          "allow systemui_app bluetooth : fd { use };",
+          "allow systemui_app cameraserver : fd { use };",
+          "allow systemui_app dumpstate : fd { use };",
+          "allow systemui_app hal_omx_server : binder { transfer };",
+          "allow systemui_app system_server : fd { use };",
+          "allow systemui_app vendor_file : file { getattr map execute execute_no_trans };",
           "allow traced_probes system_file : dir { ioctl read getattr lock open watch watch_reads search };",
           "allow traced_probes vendor_file : dir { ioctl read getattr lock open watch watch_reads search };",
           "allow traced_probes vendor_file : file { read getattr map execute open };",
